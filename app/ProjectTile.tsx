@@ -46,21 +46,21 @@ const ProjectTile = ({
 					<div className="flex items-center justify-center md:items-start md:justify-normal">
 						{liveSiteUrl && (
 							<Link href={liveSiteUrl} target="_blank">
-								<button className="p-2 mr-3 cursor-pointer bg-highlight border-highlight">
+								<button className="mr-3 px-6 py-3 cursor-pointer bg-highlight border-highlight">
 									See Live
 								</button>
 							</Link>
 						)}
 						{githubUrl && (
 							<Link href={githubUrl} target="_blank">
-								<button className="p-2 cursor-pointer border-pink">
+								<button className="px-6 py-3 cursor-pointer border-pink">
 									Github
 								</button>
 							</Link>
 						)}
 						{caseStudyUrl && (
 							<Link href={caseStudyUrl} target="_blank">
-								<button className="p-2 cursor-pointer border-pink">
+								<button className="px-6 py-3 cursor-pointer border-pink">
 									See Case Study
 								</button>
 							</Link>

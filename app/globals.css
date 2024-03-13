@@ -43,7 +43,7 @@
   }
 
   h2 {
-    @apply text-2xl md:text-4xl lg:text-7xl
+    @apply text-2xl sm:text-4xl lg:text-7xl
   }
 
   h3 {
@@ -65,7 +65,7 @@
   button {
     background-color: var(--primary-color);
     border-color: var(--border-color);
-    @apply px-5 py-3 rounded-md border hover:scale-110 transition ease-in-out duration-300
+    @apply px-8 py-4 rounded-md border hover:scale-110 transition ease-in-out duration-300
   }
 
   body {

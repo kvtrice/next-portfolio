@@ -6,7 +6,7 @@ const Projects = () => {
 		<div className="pb-20">
 			<div id="projects" className="w-full px-10 pb-28 md:pt-20">
 				<div className="max-w-[1100px] mx-auto flex flex-col justify-center items-center h-full">
-					<h2 className="md:pb-16">Projects</h2>
+					<h2 className="pb-16">Projects</h2>
 					<div className="grid md:grid-cols-2 gap-8 rounded-xl">
 						<ProjectTile
 							image="/assets/project-tiles/Sproutly.gif"

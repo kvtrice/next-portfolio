@@ -43,10 +43,10 @@ const About = () => {
 							}}
 							className="pt-5 rounded-t-full bg-blue border-t border-r border-l border-black"
 						/>
-						<button className="w-[100%] rounded-none">
+						<button className="w-[100%] max-w-[600px] rounded-none">
 							<a
 								href="/katrice_mountford_resume.pdf"
-								download="katrice-mountford-resume"
+								download="katrice_mountford_resume"
 							>
 								Download Resume
 							</a>
