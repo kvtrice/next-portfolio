@@ -4,7 +4,7 @@ import im22 from "../../public/assets/projects/talktomaple/22_maple_teampicture.
 
 const MapleFinalThoughts = () => {
 	return (
-		<section className="pb-12 flex flex-col justify-center items-center">
+		<section className="pb-12 flex flex-col justify-center items-center max-w-[750px] mx-auto">
 			<div>
 				<h3>What's next?</h3>
 				<br />
@@ -65,11 +65,10 @@ const MapleFinalThoughts = () => {
 					The Antler program was incredibly intense and high pressure,
 					and there were so many learnings that came out of it, but
 					one of the big ones would have to be how invaluable having
-					the
-					<strong>right data</strong> is. As a team we were data geeks
-					(with one co-founder even being a data scientist by trade),
-					so we took the time to track as many key metrics as we could
-					from the get go.
+					the <strong>right data</strong> is. As a team we were data
+					geeks (with one co-founder even being a data scientist by
+					trade), so we took the time to track as many key metrics as
+					we could from the get go.
 					<br />
 					<br />
 					This definitely took a bit more time and effort, but turned
@@ -84,7 +83,7 @@ const MapleFinalThoughts = () => {
 					time; each day we focussed on the number one highest impact
 					item we could be doing that takes us{" "}
 					<strong>towards our goal</strong> of retained and engaged
-					users. Having this clear north star helped us
+					users. Having this clear north star helped us{" "}
 					<strong>make trade-offs ruthlessly</strong> and move the
 					needle as far as possible in the time we had. It did mean
 					that other (also important) things got deprioritised in this

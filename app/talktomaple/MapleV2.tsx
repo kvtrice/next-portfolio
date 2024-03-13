@@ -11,7 +11,7 @@ import im19 from "../../public/assets/projects/talktomaple/19_maple_usersentimen
 
 const MapleV2 = () => {
 	return (
-		<section className="pb-12 flex flex-col justify-center items-center">
+		<section className="pb-12 flex flex-col justify-center items-center max-w-[750px] mx-auto">
 			<div>
 				<h2 className="sub-heading">Deliver</h2>
 				<h3>Bringing it to life</h3>
@@ -22,6 +22,8 @@ const MapleV2 = () => {
 					version of Talk to Maple at speed. This is the version we
 					deployed to the app stores:
 				</p>
+				<br />
+				<br />
 			</div>
 			<div className="grid md:grid-cols-2 gap-4 justify-center items-center py-5 bg-white rounded-xl">
 				<div className="flex flex-col justify-center items-center">

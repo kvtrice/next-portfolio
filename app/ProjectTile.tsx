@@ -30,14 +30,14 @@ const ProjectTile = ({
 				</div>
 				<div className="mb-2 flex flex-col items-center md:items-start p-5">
 					<h3 className="text-2xl mt-1 pb-2">{title}</h3>
-					<p className="pb-4 text-center md:text-start">
+					<p className="pb-3 text-center md:text-start">
 						{description}
 					</p>
-					<div className="flex flex-wrap items-center justify-center md:items-left md:justify-normal pb-4">
+					<div className="flex flex-wrap items-center justify-center md:items-left md:justify-normal pb-6">
 						{tags.map((tag) => (
 							<div
 								key={tag}
-								className="transition-colors ease-in-out duration-200 hover-bg rounded-xl px-2 py-[0.1rem] bg-black text-white text-sm tracking-widest mr-[0.5rem] my-1 translate-x-1 translate-y-1"
+								className="transition-all ease-in-out duration-200 hover-bg rounded-xl px-3 py-1 bg-black text-white font-heading text-xs tracking-widest mr-[0.5rem] my-1 translate-x-1 translate-y-1"
 							>
 								{tag}
 							</div>
@@ -53,14 +53,14 @@ const ProjectTile = ({
 						)}
 						{githubUrl && (
 							<Link href={githubUrl} target="_blank">
-								<button className="p-2 mr-3 cursor-pointer border-pink">
+								<button className="p-2 cursor-pointer border-pink">
 									Github
 								</button>
 							</Link>
 						)}
 						{caseStudyUrl && (
 							<Link href={caseStudyUrl} target="_blank">
-								<button className="p-2 mr-3 cursor-pointer border-pink">
+								<button className="p-2 cursor-pointer border-pink">
 									See Case Study
 								</button>
 							</Link>

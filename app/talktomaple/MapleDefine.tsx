@@ -4,7 +4,7 @@ import im4 from "../../public/assets/projects/talktomaple/4_maple_wireframes1.jp
 
 const MapleDefine = () => {
 	return (
-		<section className="pb-12 flex flex-col justify-center items-center">
+		<section className="pb-12 flex flex-col justify-center items-center max-w-[750px] mx-auto">
 			<div>
 				<h2 className="sub-heading">Define</h2>
 				<h3>Defining the scope of the MVP</h3>
@@ -81,7 +81,7 @@ const MapleDefine = () => {
 				<Image
 					src={im4}
 					alt="Wireframes of the WhatsApp conversational style journaling approach"
-					className="mb-4 rounded-lg"
+					className="rounded-lg"
 				/>
 				<figcaption className="mb-10">
 					Wireframes of the WhatsApp conversational style journaling

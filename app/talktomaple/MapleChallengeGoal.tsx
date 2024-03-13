@@ -2,7 +2,7 @@ import React from "react";
 
 const MapleChallengeGoal = () => {
 	return (
-		<section className="pb-12 flex flex-col justify-center items-center">
+		<section className="pb-12 flex flex-col justify-center items-center max-w-[750px] mx-auto">
 			<div>
 				<h2 className="sub-heading">The Challenge</h2>
 				<h3>Make journaling an engaging experience</h3>

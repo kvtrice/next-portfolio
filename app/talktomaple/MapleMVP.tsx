@@ -6,7 +6,7 @@ import im9 from "../../public/assets/projects/talktomaple/9_maple_mvpretention.j
 
 const MapleMVP = () => {
 	return (
-		<section className="pb-12 flex flex-col justify-center items-center">
+		<section className="pb-12 flex flex-col justify-center items-center max-w-[750px] mx-auto">
 			<div>
 				<h2 className="sub-heading">Develop</h2>
 				<h3>Launching the MVP</h3>
@@ -17,6 +17,7 @@ const MapleMVP = () => {
 					some targeted facebook ads to attract our first cohort of
 					users and begin getting some real customer feedback.
 				</p>
+				<br />
 				<br />
 			</div>
 			<div className="grid md:grid-cols-2 gap-4 justify-center items-center pb-8">
@@ -59,6 +60,7 @@ const MapleMVP = () => {
 					as we saw a steep decline in usage after day 1.
 				</p>
 				<br />
+				<br />
 			</div>
 			<div>
 				<Image
@@ -70,6 +72,8 @@ const MapleMVP = () => {
 					Percentage of users that completed a journal mission vs. #
 					of days after first install
 				</figcaption>
+				<br />
+				<br />
 			</div>
 			<div>
 				<h3>Managing Open A.I outages... lots of them</h3>

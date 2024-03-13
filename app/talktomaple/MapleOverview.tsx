@@ -2,7 +2,7 @@ import React from "react";
 
 const MapleOverview = () => {
 	return (
-		<section className="pb-16 flex flex-col justify-center items-center">
+		<section className="flex flex-col justify-center items-center max-w-[750px] mx-auto">
 			<div>
 				<h2 className="sub-heading">Overview</h2>
 				<p>

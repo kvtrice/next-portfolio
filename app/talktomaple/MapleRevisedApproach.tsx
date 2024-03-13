@@ -5,8 +5,9 @@ import im6 from "../../public/assets/projects/talktomaple/6_maple_prompts.jpg";
 
 const MapleRevisedApproach = () => {
 	return (
-		<section className="pb-12 flex flex-col justify-center items-center">
+		<section className="pb-12 flex flex-col justify-center items-center max-w-[750px] mx-auto">
 			<div>
+				<h2 className="sub-heading">Iterate</h2>
 				<h3>Setbacks, reflection and revising our approach</h3>
 				<br />
 				<p>
@@ -40,9 +41,11 @@ const MapleRevisedApproach = () => {
 					<br />
 					<br />I put together some wireframes to outline this revised
 					direction:
+					<br />
+					<br />
 				</p>
 			</div>
-			<div>
+			<div className="case-image mb-16">
 				<Image
 					src={im5}
 					alt="Wireframes of the revised bite-sized 1 page at a time journaling approach"
@@ -64,8 +67,10 @@ const MapleRevisedApproach = () => {
 					feedback from mental health professionals. After careful
 					consideration, we settled on an initial set of prompts:
 				</p>
+				<br />
+				<br />
 			</div>
-			<div>
+			<div className="case-image mb-10">
 				<Image
 					src={im6}
 					alt="Summary of journal prompts based on feedbak from mental health professionals"
@@ -86,7 +91,7 @@ const MapleRevisedApproach = () => {
 					Maple.
 					<br />
 					<br />
-					From the experiment, we observed that users tended to
+					From the experiment, we observed that users tended to {" "}
 					<strong>disengage</strong> after approximately 4-5
 					exchanges. The key contributor being the AI's repetitive
 					nature and excessive focus on asking "Why" repeatedly. This
@@ -113,7 +118,7 @@ const MapleRevisedApproach = () => {
 					of our users were key considerations throughout this
 					process. To address this, we implemented a "red flag" system
 					that allowed the AI to respond appropriately when users
-					discussed serious issues like
+					discussed serious issues like {" "}
 					<strong>suicide and self-harm</strong>. In such cases we
 					wanted to stop the conversation from going further and serve
 					the user with some helpful resources for seeking help.

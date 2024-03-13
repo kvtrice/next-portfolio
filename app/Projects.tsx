@@ -4,9 +4,9 @@ import ProjectTile from "./ProjectTile";
 const Projects = () => {
 	return (
 		<div className="pb-20">
-			<div id="projects" className="w-full px-10 pb-28 pt-20">
+			<div id="projects" className="w-full px-10 pb-28 md:pt-20">
 				<div className="max-w-[1100px] mx-auto flex flex-col justify-center items-center h-full">
-					<h2 className="pb-16">Projects</h2>
+					<h2 className="md:pb-16">Projects</h2>
 					<div className="grid md:grid-cols-2 gap-8 rounded-xl">
 						<ProjectTile
 							image="/assets/project-tiles/Sproutly.gif"
@@ -41,7 +41,7 @@ const Projects = () => {
 						<ProjectTile
 							image="/assets/project-tiles/talktomaple.jpg"
 							title="Talk to Maple"
-							description="A gamified Journaling Mobile Appl, powered by A.I. Built using low-code tools during Antler Australia's Startup Accelerator Program."
+							description="A gamified Journaling Mobile Appl, powered by A.I. built during Antler Australia's Startup Accelerator Program."
 							tags={["Flutterflow", "Xano", "Firebase Auth"]}
 							caseStudyUrl="/talktomaple"
 						/>

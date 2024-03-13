@@ -5,7 +5,7 @@ import im11 from "../../public/assets/projects/talktomaple/11_maple_usersentimen
 
 const MapleMVPLearnings = () => {
 	return (
-		<section className="pb-12 flex flex-col justify-center items-center">
+		<section className="pb-12 flex flex-col justify-center items-center max-w-[750px] mx-auto">
 			<div>
 				<h2 className="sub-heading">Iterate</h2>
 				<h3>Valuable learnings from the MVP</h3>
@@ -84,14 +84,16 @@ const MapleMVPLearnings = () => {
 					Fleshing these things out further resulted in the following
 					wireframes:
 				</p>
+				<br />
+				<br />
 			</div>
-			<div className="flex flex-col justify-center items-center">
+			<div className="flex flex-col justify-center items-center case-image mb-16">
 				<Image
 					src={im10}
 					alt="Wireframes of the 3 part journaling and other changes based on feedback from the MVP"
 					className="mb-4 rounded-lg"
 				/>
-				<figcaption className="mb-16">
+				<figcaption className="mb-10">
 					Wireframes of the 3 part journaling and other changes based
 					on feedback from the MVP
 				</figcaption>
@@ -167,11 +169,11 @@ const MapleMVPLearnings = () => {
 				</p>
 				<br />
 			</div>
-			<div>
+			<div className="case-image">
 				<Image
 					src={im11}
 					alt="Wireframes of the Emoji feedback capture screens"
-					className="mb-4 max-h-[500px] w-auto "
+					className="mb-4 w-auto p-10"
 				/>
 				<figcaption className="mb-10">
 					Wireframes of the Emoji feedback capture screens

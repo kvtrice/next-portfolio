@@ -6,7 +6,7 @@ import im3 from "../../public/assets/projects/talktomaple/3_maple_competitors.jp
 
 const MapleDiscover = () => {
 	return (
-		<section className="pb-12 flex flex-col justify-center items-center">
+		<section className="pb-12 flex flex-col justify-center items-center max-w-[750px] mx-auto">
 			<div>
 				<h2 className="sub-heading">Discover</h2>
 				<h3>Understanding the problem</h3>
@@ -65,8 +65,8 @@ const MapleDiscover = () => {
 					<br />
 				</p>
 			</div>
-			<div>
-				<div>
+			<div className="pb-16 pt-8">
+				<div className="case-image">
 					<Image
 						src={im1}
 						alt="Summary of Survey conducted with Gen-Z participants"
@@ -77,10 +77,10 @@ const MapleDiscover = () => {
 						alt="Summary of Gains and Pains found from research"
 						className="pb-4"
 					/>
+					<figcaption className="pb-10">
+						Summary of Gen-Z user research findings
+					</figcaption>
 				</div>
-				<figcaption className="pb-16">
-					Summary of Gen-Z user research findings
-				</figcaption>
 			</div>
 			<div>
 				<h3>Researching the Competitors</h3>
@@ -144,7 +144,7 @@ const MapleDiscover = () => {
 				</ul>
 				<br />
 			</div>
-			<div>
+			<div className="case-image">
 				<Image
 					src={im3}
 					alt="Summary of our competitor analysis"

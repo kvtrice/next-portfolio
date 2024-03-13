@@ -5,7 +5,7 @@ import im21 from "../../public/assets/projects/talktomaple/21_maple_feedback.jpg
 
 const MapleResults = () => {
 	return (
-		<section className="pb-12 flex flex-col justify-center items-center">
+		<section className="pb-12 flex flex-col justify-center items-center max-w-[750px] mx-auto">
 			<div>
 				<h2 className="sub-heading">Outcome</h2>
 				<h3>Retention rate uplift</h3>
@@ -18,13 +18,13 @@ const MapleResults = () => {
 				</p>
 				<br />
 			</div>
-			<div>
+			<div className="case-image mb-16">
 				<Image
 					src={im20}
 					alt="Percentage of users that completed a journal mission vs. # of days after first install - MVP vs. V1"
 					className="pb-6"
 				/>
-				<figcaption className="pb-16">
+				<figcaption className="pb-10">
 					Percentage of users that completed a journal mission vs. #
 					of days after first install - MVP vs. Version 1
 				</figcaption>
@@ -79,10 +79,12 @@ const MapleResults = () => {
 					feedback, reinforcing again that we were heading in the
 					right direction:
 				</p>
+				<br />
+				<br />
 			</div>
-			<div>
+			<div className="case-image">
 				<Image src={im21} alt="In-app user feedback" className="pb-4" />
-				<figcaption className="pb-16">In-app user feedback</figcaption>
+				<figcaption className="pb-10">In-app user feedback</figcaption>
 			</div>
 		</section>
 	);

@@ -8,7 +8,7 @@ const About = () => {
 				id="about"
 				className="w-full p-2 py-16 max-w-[1100px] m-auto flex justify-center items-center flex-col"
 			>
-				<h2 className="px-5 pb-10">About</h2>
+				<h2 className="px-5 md:pb-10">About</h2>
 				<div className="grid md:grid-cols-3 grid-cols-1 md:p-0 place-items-center m-10 lg:m-0">
 					<p className="col-span-2 order-last md:order-first text-center md:pr-8 md:text-left pt-8 md:pt-0 leading-8 text-[#484138]">
 						As a recent graduate and Junior Software Engineer, I've
