@@ -68,6 +68,23 @@
     color: var(--primary-text-colour);
     background: var(--bg-color);
   }
+
+  @keyframes hover-animation {
+    0% {
+        background-color: #FFD6FF;
+    }
+    50% {
+        background-color: #C8B6FF;
+    }
+    100% {
+        background-color: #BBD0FF;
+    }
+  }
+  
+  .hover-bg:hover {
+    animation: hover-animation 1s infinite alternate;
+    color: black;
+  }
 }
 
 @layer components {
