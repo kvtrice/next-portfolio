@@ -29,6 +29,31 @@ const config: Config = {
 				black: "#000",
 				white: "#FEFEFE",
 			},
+			animation: {
+				blob: "blob 15s infinite",
+			},
+			keyframes: {
+				blob: {
+					"0%": {
+						transform: "translate(0px, 0px) scale(1)",
+					},
+					"20%": {
+						transform: "translate(50px, -100px) scale(1.2)",
+					},
+					"40%": {
+						transform: "translate(-150px, 120px) scale(1.5)",
+					},
+					"60%": {
+						transform: "translate(-80px, -50px) scale(1)",
+					},
+					"80%": {
+						transform: "translate(120px, 150px) scale(0.8)",
+					},
+					"100%": {
+						transform: "translate(0px, 0px) scale(1)",
+					},
+				},
+			},
 		},
 	},
 	plugins: [],

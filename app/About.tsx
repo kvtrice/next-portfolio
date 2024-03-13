@@ -6,7 +6,7 @@ const About = () => {
 		<div className="">
 			<div
 				id="about"
-				className="w-full lg:h-screen p-2 py-16 max-w-[1100px] m-auto flex justify-center items-center flex-col "
+				className="w-full p-2 py-16 max-w-[1100px] m-auto flex justify-center items-center flex-col"
 			>
 				<h2 className="px-5 pb-10">About</h2>
 				<div className="grid md:grid-cols-3 grid-cols-1 md:p-0 place-items-center m-10 lg:m-0">

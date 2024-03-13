@@ -6,29 +6,31 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+:root {
+  /* Background */
+  --bg-gradient: linear-gradient(to bottom right, #FFD6FF, #C8B6FF, #BBD0FF);
+  --bg-color: #FEFEFEDD;
+  --navbar-bg-color: #FEFEFEDD;
+
+  /* Colours */
+  --primary-text-colour: #000;
+  --primary-color: #FFD6FF;
+  --highlight-color: #FFF7D0;
+  --border-color: black;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+[data-theme="dark"] {
+  /* Background */
+    --bg-gradient: linear-gradient(to bottom right, #3D003D, #24003D, #000D29);
+    --bg-color: #000000FE;
+    --navbar-bg-color: #00000095;
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
+    /* Colours */
+    --primary-text-colour: #FEFEFE;
+    --primary-color: #3D003D;
+    --highlight-color: #FFF7D0;
+    --border-color: #FEFEFE;
+}
 
 @layer base {
 
@@ -57,11 +59,34 @@ body {
   }
 
   button {
-    @apply bg-pink px-5 py-3 rounded-md border-black border hover:scale-110 transition ease-in-out duration-300
+    background-color: var(--primary-color);
+    border-color: var(--border-color);
+    @apply px-5 py-3 rounded-md border hover:scale-110 transition ease-in-out duration-300
+  }
+
+  body {
+    color: var(--primary-text-colour);
+    background: var(--bg-color);
   }
 }
 
 @layer components {
+
+  /* Global */
+
+  .navbar {
+    background-color: var(--navbar-bg-color);
+  }
+
+  /* Hero */
+
+  .hero {
+    background: var(--bg-gradient);
+    border-color: var(--border-color);
+  }
+  
+
+  /* Case Study */
   
   .sub-heading {
     font-size: 14px;
@@ -86,5 +111,13 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+
+  .animation-delay-8000 {
+    animation-delay: 8s;
   }
 }

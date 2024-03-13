@@ -14,7 +14,7 @@ const Navbar = () => {
 		<div className="fixed w-full h-20 z-[100]">
 			<div className="flex justify-end md:justify-center items-center w-auto h-full px-2 2xl:px-16 bg-transparent">
 				<div>
-					<ul className="hidden shadow-lg shadow-black/20 rounded-xl md:flex p-3 bg-white/90">
+					<ul className="hidden shadow-lg shadow-black/20 rounded-xl md:flex p-3 navbar">
 						<Link href="./">
 							<li className="text-md hover:underline p-2 font-heading">
 								Home
