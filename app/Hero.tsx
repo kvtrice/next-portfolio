@@ -19,15 +19,10 @@ const Hero = () => {
 				</div>
 				{/* Hero content */}
 				<div className="my-9 z-10">
-					<h1 className="mt-20 py-4">
-						I'm <span className="px-4 rounded-lg">Kat</span>
-					</h1>
-					<h1 className="pb-5 px-5">A Software Engineer.</h1>
-					<p className="text-xl py-4 max-w-[1000px] m-auto px-10">
-						I have a passion for front-end development and building
-						great user experiences, having experience across
-						React.js, JavaScript and CSS.
-					</p>
+					<h1 className="mt-20 py-4">I'm Kat</h1>
+					<h2 className="pb-5 px-5">
+						A Product Manager & Software Engineer
+					</h2>
 					<a href="#projects">
 						<button className="mt-10">View My Projects</button>
 					</a>
