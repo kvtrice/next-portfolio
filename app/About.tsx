@@ -11,25 +11,19 @@ const About = () => {
 				<h2 className="px-5 md:pb-10">About</h2>
 				<div className="grid md:grid-cols-3 grid-cols-1 md:p-0 place-items-center m-10 lg:m-0">
 					<p className="col-span-2 order-last md:order-first text-center md:pr-8 md:text-left pt-8 md:pt-0 leading-8 text-[#484138]">
-						As a recent graduate and Junior Software Engineer, I've
+						I'm a Product Manager and Software Engineer with 7 years experience in the tech industry, working 4 years directly as a product manager and ~1 year of hands-on tech experience.
+						<br />
+						<br />
+						As a recent software engineering graduate I've
 						learnt the fundamentals of full-stack development;
-						specialising in the Front-End with skills across
-						React.js, JavaScript and CSS to craft engaging web
-						applications.
+						with experience across React, JavaScript / Typescript, Node, Express, MongoDB, Python, Flask, PostgreSQL, SQL, HTML & CSS.
 						<br />
 						<br />
-						Before transitioning into software engineering, I spent
-						four years as a Product Manager & Designer in B2B SaaS
-						companies, leading strategic initiatives, orchestrating
-						international product launches, and spearheading
-						user-centric solutions.
+						And as a Product Manager in B2B SaaS
+						companies I've led strategic initiatives, spearheaded
+						international product launches, and taken product roadmaps from inception through to successful execution.
 						<br />
-						<br />I also co-founded and launched an A.I powered
-						self-care app, Talk to Maple, which garnered hundreds of
-						downloads from early users. My diverse background equips
-						me with a unique blend of technical prowess, strategic
-						thinking, and creative insight to deliver exceptional
-						user experiences that resonate.
+						<br />Alongside experience founding my own startup, my diverse background enables me to solve complex challenges and collaborate seamlessly across cross-functional teams to deliver impactful solutions that customers love. 
 					</p>
 					<div className="flex flex-col items-center justify-center w-full">
 						<Image
