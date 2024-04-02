@@ -19,10 +19,12 @@ const Hero = () => {
 				</div>
 				{/* Hero content */}
 				<div className="my-9 z-10">
-					<h1 className="mt-20 py-4">I'm Kat</h1>
-					<h2 className="pb-5 px-5">
-						A Product Manager & Software Engineer
-					</h2>
+					<h1 className="mt-20 py-4">Hey I'm Kat.</h1>
+					<h1 className="pb-5 px-5">A Software Engineer</h1>
+					<h3 className="pb-5 px-5">
+						That's passionate about using technology to make a lasting
+						impact on others.
+					</h3>
 					<a href="#projects">
 						<button className="mt-10">View My Projects</button>
 					</a>
