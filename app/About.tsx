@@ -34,9 +34,9 @@ const About = () => {
 								objectFit: "cover",
 								fill: "true",
 							}}
-							className="pt-5 rounded-t-full bg-blue border-t border-r border-l border-black"
+							className="pt-5 rounded-t-full bg-pink border-t border-r border-l border-black"
 						/>
-						<button className="w-[100%] max-w-[600px] rounded-none">
+						<button className="w-[100%] max-w-[600px] bg-blue rounded-none">
 							<a
 								href="/katrice_mountford_resume.pdf"
 								download="katrice_mountford_resume"
