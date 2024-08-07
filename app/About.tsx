@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 const About = () => {
-  return (
+	return (
 		<div className="">
 			<div
 				id="about"
@@ -10,19 +10,34 @@ const About = () => {
 			>
 				<h2 className="px-5 md:pb-10">About</h2>
 				<div className="grid md:grid-cols-3 grid-cols-1 md:p-0 place-items-center m-10 lg:m-0">
-					<p className="col-span-2 order-last md:order-first text-center md:pr-8 md:text-left pt-8 md:pt-0 leading-8 text-[#484138]">
-						I'm a Junior Software Engineer with 7 years experience in the tech industry. I've worked as  product Manager for over 4 years and have recently re-trained as a Software Engineer with ~1 year of hands-on tech experience.
+					<p className="col-span-2 font-normal order-last md:order-first text-center md:pr-8 md:text-left pt-8 md:pt-0 leading-8 text-[#484138]">
+						I'm a Junior Software Engineer with over 7 years of
+						experience in the tech industry. Most recently I've
+						worked as a Product Manager in B2B SaaS companies, where
+						I spent over 4 years collaborating closely with
+						development teams to drive strategic initiatives and
+						product launches.
 						<br />
 						<br />
-						As a recent software engineering graduate I've
-						learnt the fundamentals of full-stack development;
-						with experience across React, JavaScript / Typescript, Node, Express, MongoDB, Python, Flask, PostgreSQL, SQL, HTML & CSS.
+						A pivotal moment in my career was participating in a
+						startup accelerator program. This experience, where I
+						quickly built and launched a mobile app using low-code
+						tools, inspired me to formally retrain as a Software
+						Engineer.
 						<br />
 						<br />
-						And as a Product Manager I've led strategic initiatives, spearheaded
-						international product launches, and taken product roadmaps from inception through to successful execution.
+						I completed a 6-month coding bootcamp, earning a Diploma
+						of IT, and joined _nology, a program renowned for its
+						commitment to diversity. I'm also currently completing a
+						Bachelor of Computer Science as I continue to grow my
+						skills.
 						<br />
-						<br />Alongside experience founding my own startup, my diverse background enables me to solve complex challenges and collaborate seamlessly across cross-functional teams to deliver impactful solutions that customers love. 
+						<br />
+						With a strong foundation in full-stack development and a
+						focus on frontend technologies, my skills include React, Next.js,
+						JavaScript/TypeScript, Node.js, Express, SQL, HTML, and CSS. I thrive on creating
+						intuitive user experiences and bringing solutions
+						to life that make an impact. ✨
 					</p>
 					<div className="flex flex-col items-center justify-center w-full">
 						<Image
@@ -48,7 +63,7 @@ const About = () => {
 				</div>
 			</div>
 		</div>
-  );
+	);
 };
 
 export default About;

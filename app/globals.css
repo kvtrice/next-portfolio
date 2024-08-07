@@ -55,7 +55,7 @@
   }
 
   p, li {
-    @apply tracking-wide leading-8 font-light font-body
+    @apply tracking-wide leading-8 font-normal font-body
   }
 
   figcaption {
@@ -65,7 +65,7 @@
   button {
     background-color: var(--primary-color);
     border-color: var(--border-color);
-    @apply px-8 py-4 rounded-md border hover:scale-110 transition ease-in-out duration-300
+    @apply px-8 py-4 rounded-md border hover:scale-110 transition ease-in-out duration-300 text-lg
   }
 
   body {

@@ -22,8 +22,7 @@ const Hero = () => {
 					<h1 className="mt-20 py-4">Hey I'm Kat.</h1>
 					<h1 className="pb-5 px-5">A Software Engineer</h1>
 					<h3 className="pb-5 px-5">
-						That's passionate about using technology to make a lasting
-						impact on others.
+						An ex Product Manager turned Software Engineer, I'm passionate about using technology to create impactful solutions and deliver great user experiences.
 					</h3>
 					<a href="#projects">
 						<button className="mt-10">View My Projects</button>
