@@ -12,15 +12,29 @@ const Projects = () => {
 					<h2 className="pb-16">Projects</h2>
 					<div className="grid md:grid-cols-2 gap-8 rounded-xl">
 						<ProjectTile
+							image="/assets/project-tiles/to-do.jpg"
+							title="To-do Task Tracker"
+							description="A full stack to-do application where users can add, edit, duplicate and archive tasks."
+							tags={[
+								"TypeScript",
+								"React",
+								"Java",
+								"Spring Boot",
+								"PostgreSQL",
+							]}
+							liveSiteUrl="https://kats-todo-app.vercel.app/"
+							githubUrl="https://github.com/kvtrice/todo-app"
+						/>
+						<ProjectTile
 							image="/assets/project-tiles/Sproutly.gif"
 							title="Sproutly Forum"
 							description="Sproutly is a Forum for Plant Lovers; it's a full stack
 							app built using MongoDB, Express.js, React.js & Node.js."
 							tags={[
-								"React.js",
-								"Node.js",
+								"React",
+								"Node",
 								"MongoDB",
-								"Express.js",
+								"Express",
 								"CSS",
 								"ViTest",
 							]}
