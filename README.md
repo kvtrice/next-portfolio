@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Kat Mountford's Portfolio
 
-## Getting Started
+Welcome to my personal portfolio! I'm Kat, a Junior Full Stack Engineer with over 7 years in the tech industry, transitioning from Product Management to Software Engineering. This site showcases my work, skills, and experience in web development.
 
-First, run the development server:
+### [View the live site](https://www.katmountford.com/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* Next.js
+* React
+* Tailwind CSS
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Featured Projects
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. **To-do Task Tracker**
+   - A full stack application where users can add, edit, duplicate, and archive tasks.
+   - **Tech Stack**: TypeScript, React, Java, Spring Boot, PostgreSQL  
+   - [Live Site](https://kats-todo-app.vercel.app/) | [GitHub](https://github.com/kvtrice/todo-app)
 
-## Learn More
+2. **Sproutly Forum**
+   - A forum for plant lovers, built with a full stack MERN setup.
+   - **Tech Stack**: React, Node, MongoDB, Express, CSS, ViTest  
+   - [Live Site](https://sproutlyapp.vercel.app/) | [GitHub](https://github.com/kvtrice/sproutly-frontend)
 
-To learn more about Next.js, take a look at the following resources:
+3. **Techie Trinkets e-Shop**
+   - An e-commerce site for tech gadgets, with functionality for browsing, favoriting, and checkout.
+   - **Tech Stack**: React, React-router, Sass, BEM, Firebase Firestore  
+   - [Live Site](https://techie-trinkets.vercel.app/) | [GitHub](https://github.com/kvtrice/techie-trinkets-eShop)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **Google Books Search Engine**
+   - A web app consuming the Google Books API, allowing users to search and browse for books.
+   - **Tech Stack**: React, Sass, Google Books API  
+   - [Live Site](https://google-book-search-theta.vercel.app/) | [GitHub](https://github.com/kvtrice/books-search-engine)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+5. **Morse Code Translator**
+   - A real-time translator between English and Morse code.
+   - **Tech Stack**: HTML, Sass, BEM, JavaScript, Jest  
+   - [Live Site](https://morse-code-translator-ten.vercel.app/) | [GitHub](https://github.com/kvtrice/morse-code-translator)
 
-## Deploy on Vercel
+6. **Windows 98 OS Simulator**
+   - A simulated version of the Windows 98 operating system with working applications.
+   - **Tech Stack**: HTML, CSS, Sass, JavaScript  
+   - [Live Site](https://windows-98-os.vercel.app/) | [GitHub](https://github.com/kvtrice/windows-98-OS)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+7. **Talk to Maple**
+   - A gamified journaling mobile app built during Antler Australia's Startup Accelerator Program, powered by AI.
+   - **Tech Stack**: Flutterflow, Xano, Firebase Auth, Open AI API  
+   - [Case Study](https://katmountford.com/talktomaple)

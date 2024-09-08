@@ -82,7 +82,7 @@ const Projects = () => {
 						<ProjectTile
 							image="/assets/project-tiles/talktomaple.jpg"
 							title="Talk to Maple"
-							description="A gamified Journaling Mobile Appl, powered by A.I. built during Antler Australia's Startup Accelerator Program."
+							description="A gamified Journaling Mobile App, powered by A.I. built during Antler Australia's Startup Accelerator Program."
 							tags={[
 								"Flutterflow",
 								"Xano",
