@@ -6,8 +6,9 @@ Welcome to my personal portfolio! I'm Kat, a Junior Full Stack Engineer with ove
 
 ## Tech Stack
 
-* Next.js
+* Typescript
 * React
+* Next.js
 * Tailwind CSS
 
 ## Featured Projects
