@@ -11,33 +11,34 @@ const About = () => {
 				<h2 className="px-5 md:pb-10">About</h2>
 				<div className="grid md:grid-cols-3 grid-cols-1 md:p-0 place-items-center m-10 lg:m-0">
 					<p className="col-span-2 font-normal order-last md:order-first text-center md:pr-8 md:text-left pt-8 md:pt-0 leading-8 text-[#484138]">
-						I'm a Junior Software Engineer with over 7 years of
-						experience in the tech industry. Most recently I've
-						worked as a Product Manager in B2B SaaS companies, where
-						I spent over 4 years collaborating closely with
-						development teams to drive strategic initiatives and
-						product launches.
+						I'm a Product Manager with nearly 8 years of experience
+						in the tech industry, including 4+ years as a PM
+						delivering impactful solutions in B2B SaaS companies. My
+						career is driven by a passion for improving users'
+						lives, combining empathy, strategic thinking, and
+						innovative problem-solving.
 						<br />
 						<br />
-						A pivotal moment in my career was participating in a
-						startup accelerator program. This experience, where I
-						quickly built and launched a mobile app using low-code
-						tools, inspired me to formally retrain as a Software
-						Engineer.
+						A recent chapter of my journey involved hands-on
+						technical experience in full-stack development, where I
+						enhanced my ability to connect user needs, business
+						goals, and technical feasibility. This unique blend of
+						skills enables me to deliver user-focused solutions that
+						resonate with customers.
 						<br />
 						<br />
-						I completed a 6-month coding bootcamp, earning a Diploma
-						of IT, and joined _nology, a program renowned for its
-						commitment to diversity. I'm also currently completing a
-						Bachelor of Computer Science as I continue to grow my
-						skills.
+						I bring a strong foundation in product strategy, user
+						research, and intuitive UX design, complemented by
+						technical proficiency in React, Next.js,
+						JavaScript/TypeScript, Node.js, Express, SQL, HTML, and
+						CSS. This combination allows me to bridge the gap
+						between product and engineering, ensuring we arrive at
+						the best solution for the ideal customer outcome.
 						<br />
-						<br />
-						With a strong foundation in full-stack development and a
-						focus on frontend technologies, my skills include React, Next.js,
-						JavaScript/TypeScript, Node.js, Express, SQL, HTML, and CSS. I thrive on creating
-						intuitive user experiences and bringing solutions
-						to life that make an impact. ✨
+						<br />I thrive on creating meaningful solutions that
+						empower users and make a difference, working at the
+						intersection of strategy, design, and technology to
+						bring big ideas to life. ✨
 					</p>
 					<div className="flex flex-col items-center justify-center w-full">
 						<Image
