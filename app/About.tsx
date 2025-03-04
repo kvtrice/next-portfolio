@@ -11,28 +11,33 @@ const About = () => {
 				<h2 className="px-5 md:pb-10">About</h2>
 				<div className="grid md:grid-cols-3 grid-cols-1 md:p-0 place-items-center m-10 lg:m-0">
 					<p className="col-span-2 font-normal order-last md:order-first text-center md:pr-8 md:text-left pt-8 md:pt-0 leading-8 text-[#484138]">
-						Hey I'm Kat, a Software Engineer with a strong
-						foundation in Product Management and a passion for
-						building impactful, user-focused solutions.
+						Hey I'm Kat, a Product Owner & Business Analyst with a
+						background in Product Management, UX Design, and
+						Software Engineering. I specialise in bridging the gap
+						between business needs, user goals, and technical
+						feasibility to drive meaningful solutions.
+						<br />
+						<br />I thrive in structured, process-driven
+						environments, leveraging agile methodologies, backlog
+						management, and data-driven insights to improve
+						workflows and align stakeholders.
 						<br />
 						<br />
-						After 8 years in tech, including 4+ years as a PM in B2B
-						SaaS, I transitioned into software engineering to deepen
-						my technical expertise and contribute more directly to
-						building great products.
+						My experience includes: <br />
+						📝 Defining & prioritising requirements to streamline
+						delivery and reduce project bottlenecks
+						<br />
+						🎯 Translating user needs & business goals into clear,
+						actionable product decisions
+						<br />
+						👩‍💻 Collaborating with cross-functional teams to ensure
+						alignment between business strategy and technical
+						execution
 						<br />
 						<br />
-						My journey began when I built and launched a low-code
-						mobile app through a startup accelerator program,
-						followed by upskilling via intensive bootcamps and
-						working hands-on with full-stack technologies.
-						<br />
-						<br /> Now, I bring a unique blend of technical skills,
-						product thinking, and customer obsession to everything I
-						build. With an ability to bridge the gap between
-						engineering and product, I thrive in solving complex
-						problems and creating software that delivers real
-						impact ✨
+						Currently completing an MBA, I'm deepening my expertise
+						in business strategy and operational problem-solving to
+						further improve my execution and impact ✨
 					</p>
 					<div className="flex flex-col items-center justify-center w-full">
 						<Image
