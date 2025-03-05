@@ -4,9 +4,9 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 export const metadata: Metadata = {
-	title: "Katrice Mountford | Product Owner & Business Analyst",
+	title: "Katrice Mountford | Product Manager",
 	description:
-		"KKatrice Mountford is a Product Owner & Business Analyst with a background in Software Engineering, UX/UI Design, and Product Management. She specialises in translating business needs and user insights into structured, actionable solutions, ensuring seamless collaboration between stakeholders and technical teams. Passionate about creating intuitive, user-centered experiences, she focuses on delivering well-defined, impactful solutions that drive real business value.",
+		"Katrice Mountford is a Product Manager passionate about solving real customer problems and building products that deliver meaningful impact. With a background in Product Management, UX/UI Design, and Software Engineering, she specialises in translating user insights and business needs into clear, actionable solutions. She thrives on collaboration, data-driven decision-making, and agile execution to create intuitive, high-value products.",
 };
 
 export default function RootLayout({
