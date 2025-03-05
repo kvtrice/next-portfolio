@@ -1,6 +1,6 @@
 # Kat Mountford's Portfolio
 
-Welcome to my personal portfolio! I'm Kat, a Junior Full Stack Engineer with over 7 years in the tech industry, transitioning from Product Management to Software Engineering. This site showcases my work, skills, and experience in web development.
+Welcome to my personal portfolio! This site showcases my work, skills, and experience across tech.
 
 ### [View the live site](https://www.katmountford.com/)
 
