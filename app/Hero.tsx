@@ -23,11 +23,10 @@ const Hero = () => {
 				{/* Hero content */}
 				<div className="my-9 z-10">
 					<h1 className="mt-20 py-4">Hey I'm Kat,</h1>
-					<h1 className="pb-5 px-5">A Product Manager</h1>
+					<h1 className="pb-5 px-5">A Software Engineer</h1>
 					<h3 className="pb-5 px-5">
-						Passionate about solving real customer problems and
-						bridging the gap between users, business, and
-						technology.
+						Passionate about crafting intuitive, user-friendly
+						interfaces that make technology effortless and engaging.
 					</h3>
 					<a href="#projects">
 						<button className="mt-10">View My Projects</button>

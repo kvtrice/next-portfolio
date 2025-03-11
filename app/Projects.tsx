@@ -12,18 +12,6 @@ const Projects = () => {
 					<h2 className="pb-16">Projects</h2>
 					<div className="grid md:grid-cols-2 gap-8 rounded-xl">
 						<ProjectTile
-							image="/assets/project-tiles/talktomaple.jpg"
-							title="Talk to Maple"
-							description="A gamified Journaling Mobile App, powered by A.I. built during Antler Australia's Startup Accelerator Program."
-							tags={[
-								"Flutterflow",
-								"Xano",
-								"Firebase Auth",
-								"Open AI API",
-							]}
-							caseStudyUrl="/talktomaple"
-						/>
-						<ProjectTile
 							image="/assets/project-tiles/to-do.jpg"
 							title="To-do Task Tracker"
 							description="A full stack to-do application where users can add, edit, duplicate and archive tasks."
@@ -90,6 +78,18 @@ const Projects = () => {
 							tags={["HTML", "CSS", "Sass", "Javascript"]}
 							liveSiteUrl="https://windows-98-os.vercel.app/"
 							githubUrl="https://github.com/kvtrice/windows-98-OS"
+						/>
+						<ProjectTile
+							image="/assets/project-tiles/talktomaple.jpg"
+							title="Talk to Maple"
+							description="A gamified Journaling Mobile App, powered by A.I. built during Antler Australia's Startup Accelerator Program."
+							tags={[
+								"Flutterflow",
+								"Xano",
+								"Firebase Auth",
+								"Open AI API",
+							]}
+							caseStudyUrl="/talktomaple"
 						/>
 					</div>
 				</div>

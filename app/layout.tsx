@@ -4,9 +4,9 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 export const metadata: Metadata = {
-	title: "Katrice Mountford | Product Manager",
+	title: "Katrice Mountford | Software Engineer",
 	description:
-		"Katrice Mountford is a Product Manager passionate about solving real customer problems and building products that deliver meaningful impact. With a background in Product Management, UX/UI Design, and Software Engineering, she specialises in translating user insights and business needs into clear, actionable solutions. She thrives on collaboration, data-driven decision-making, and agile execution to create intuitive, high-value products.",
+		"Katrice Mountford is a Software Engineer passionate about crafting intuitive, user-friendly interfaces that make technology effortless to use. With a background in UX/UI Design, Product Management, and Software Engineering, she specializes in building engaging, accessible, and high-performing web experiences. She thrives on collaboration, design-driven development, and continuous learning to create seamless, impactful digital products.",
 };
 
 export default function RootLayout({

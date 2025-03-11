@@ -11,40 +11,31 @@ const About = () => {
 				<h2 className="px-5 md:pb-10">About</h2>
 				<div className="grid md:grid-cols-3 grid-cols-1 md:p-0 place-items-center m-10 lg:m-0">
 					<p className="col-span-2 font-normal order-last md:order-first text-center md:pr-8 md:text-left pt-8 md:pt-0 leading-8 text-[#484138]">
-						Hey, I'm Kat 👋
+						Hey I'm Kat 👋 A Junior Software Engineer passionate
+						about building intuitive, user-friendly interfaces that
+						make technology feel effortless. With a background in UX
+						/ UI Design and Product Management, I bring a user-first
+						mindset to frontend development, ensuring what I build
+						isn't just functional - it truly resonates with users.
 						<br />
 						<br />
-						I'm a Product Manager with a background in Product
-						Management, UX Design, and Software Engineering. I'm
-						passionate about solving real customer problems and
-						bridging the gap between business needs, user goals, and
-						technical feasibility to create products that deliver
-						real impact.
+						I started in software engineering as a co-founder and
+						low-code developer, launching Talk to Maple, an
+						AI-powered self-care mobile app. That experience sparked
+						my love for coding and crafting great user experiences,
+						leading me to earn a Diploma of IT with Coder Academy,
+						where I honed my skills in JavaScript, React, and UI
+						development.
 						<br />
 						<br />
-						I thrive in customer-driven environments, using agile
-						methodologies, backlog management, and data-driven
-						insights to turn ideas into actionable, high-impact
-						solutions. By working closely with stakeholders, I
-						ensure seamless collaboration between teams to build
-						products that truly matter.
-						<br />
-						<br />
-						<strong>What I Do Best:</strong>
-						<br />
-						📝 Define & prioritise requirements to streamline
-						delivery and reduce bottlenecks
-						<br />
-						🎯 Turn user needs & business goals into actionable
-						product decisions
-						<br />
-						👩‍💻 Align business strategy with technical execution
-						through cross-functional collaboration
-						<br />
-						<br />
-						Currently completing an MBA, I'm deepening my expertise
-						in business strategy and operational problem-solving to
-						enhance my impact even further.
+						Since then, I've grown my experience through a software
+						engineering internship, immersive training with _nology,
+						and now my role at Aurecon, where I help embed
+						generative AI into intuitive applications - creating
+						seamless, accessible, and engaging AI-powered
+						experiences. I thrive on collaboration, problem-solving,
+						continuous learning and translating complex challenges
+						into elegant products that make a real impact.
 					</p>
 					<div className="flex flex-col items-center justify-center w-full">
 						<Image
