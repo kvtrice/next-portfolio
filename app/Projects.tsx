@@ -12,20 +12,6 @@ const Projects = () => {
 					<h2 className="pb-16">Projects</h2>
 					<div className="grid md:grid-cols-2 gap-8 rounded-xl">
 						<ProjectTile
-							image="/assets/project-tiles/to-do.jpg"
-							title="To-do Task Tracker"
-							description="A full stack to-do application where users can add, edit, duplicate and archive tasks."
-							tags={[
-								"TypeScript",
-								"React",
-								"Java",
-								"Spring Boot",
-								"PostgreSQL",
-							]}
-							liveSiteUrl="https://kats-todo-app.vercel.app/"
-							githubUrl="https://github.com/kvtrice/todo-app"
-						/>
-						<ProjectTile
 							image="/assets/project-tiles/Sproutly.gif"
 							title="Sproutly Forum"
 							description="Sproutly is a Forum for Plant Lovers; it's a full stack
@@ -42,18 +28,16 @@ const Projects = () => {
 							githubUrl="https://github.com/kvtrice/sproutly-frontend"
 						/>
 						<ProjectTile
-							image="/assets/project-tiles/techie-trinkets.jpg"
-							title="Techie Trinkets e-Shop"
-							description="An e-commerce shop front allowing users to browse, favourite and checkout various tech gadgets."
+							image="/assets/project-tiles/talktomaple.jpg"
+							title="Talk to Maple"
+							description="A gamified Journaling Mobile App, powered by A.I. built during Antler Australia's Startup Accelerator Program."
 							tags={[
-								"React",
-								"React-router",
-								"Sass",
-								"BEM",
-								"Firebase Firestore",
+								"Flutterflow",
+								"Xano",
+								"Firebase Auth",
+								"Open AI API",
 							]}
-							liveSiteUrl="https://techie-trinkets.vercel.app/"
-							githubUrl="https://github.com/kvtrice/techie-trinkets-eShop"
+							caseStudyUrl="/talktomaple"
 						/>
 						<ProjectTile
 							image="/assets/project-tiles/google-books.jpg"
@@ -78,18 +62,6 @@ const Projects = () => {
 							tags={["HTML", "CSS", "Sass", "Javascript"]}
 							liveSiteUrl="https://windows-98-os.vercel.app/"
 							githubUrl="https://github.com/kvtrice/windows-98-OS"
-						/>
-						<ProjectTile
-							image="/assets/project-tiles/talktomaple.jpg"
-							title="Talk to Maple"
-							description="A gamified Journaling Mobile App, powered by A.I. built during Antler Australia's Startup Accelerator Program."
-							tags={[
-								"Flutterflow",
-								"Xano",
-								"Firebase Auth",
-								"Open AI API",
-							]}
-							caseStudyUrl="/talktomaple"
 						/>
 					</div>
 				</div>
