@@ -19,7 +19,7 @@ const Hero = () => {
         </div>
         {/* Hero content */}
         <div className='my-9 z-10'>
-          <h1 className='mt-20 pb-5 px-20 md:text-[180px] text-[80px]'>
+          <h1 className='mt-20 pb-5 px-20 md:text-[160px] text-[80px]'>
             Kat Mountford
           </h1>
           <h3 className='pb-5 px-20'>
