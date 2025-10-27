@@ -1,12 +1,12 @@
-import React from "react";
-import MapleCaseStudy from "./MapleCaseStudy";
+import React from 'react';
+import MapleCaseStudy from './MapleCaseStudy';
 
 const talktomaple = () => {
-	return (
-		<div>
-			<MapleCaseStudy />
-		</div>
-	);
+  return (
+    <div>
+      <MapleCaseStudy />
+    </div>
+  );
 };
 
 export default talktomaple;
