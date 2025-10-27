@@ -24,7 +24,7 @@ const Hero = () => {
           </h1>
           <h3 className='pb-5 px-20'>
             A tech professional with 9 years experience across Software
-            Engineering, Product Management, Design and Customer Experience
+            Engineering, Product Management, Design and Customer Experience.
           </h3>
           <a href='#projects'>
             <button className='mt-10'>View My Projects</button>
