@@ -19,12 +19,12 @@ const Hero = () => {
         </div>
         {/* Hero content */}
         <div className='my-9 z-10'>
-          <h1 className='mt-20 pb-5 px-20 md:text-[160px] text-[80px]'>
-            Kat Mountford
-          </h1>
+          <h1 className='mt-20 py-4'>Hey I'm Kat,</h1>
+          <h1 className='pb-5 px-5'>A Product Manager</h1>
           <h3 className='pb-5 px-20'>
-            A tech professional with 9 years experience across Software
-            Engineering, Product Management, Design and Customer Experience.
+            with a background across software engineering, AI and Product
+            Design, specialising in translating complex problems into simple
+            solutions.
           </h3>
           <a href='#projects'>
             <button className='mt-10'>View My Projects</button>

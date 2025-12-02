@@ -11,27 +11,37 @@ const About = () => {
         <h2 className='px-5 md:pb-10'>About</h2>
         <div className='grid md:grid-cols-3 grid-cols-1 md:p-0 place-items-center m-10 lg:m-0'>
           <p className='col-span-2 font-normal order-last md:order-first text-center md:pr-8 md:text-left pt-8 md:pt-0 leading-8 text-[#484138]'>
-            Hey I'm Kat 👋 A technology professional with a background that
-            spans software engineering, product management, and customer
-            experience. I love making complex things feel simple - whether
-            that's through an intuitive interface, a clear onboarding flow, or
-            thoughtful documentation that really supports users.
+            Hey I'm Kat 👋 A Product Manager who likes making things clearer,
+            simpler, and easier for people to use. Most of my work sits at the
+            intersection of product, design, and engineering. I enjoy diving
+            into messy or unclear problems, understanding what people are
+            actually trying to do and then shaping a solution that genuinely
+            helps.
             <br />
             <br />
-            I've worked across enterprise tools, early-stage startups and B2B
-            SaaS platforms where I've led international product launches,
-            onboarded early customers, and built experiences that delight and
-            engage users.
+            My background includes product management, UX thinking, and enough
+            hands-on engineering to collaborate closely with developers and
+            understand what's feasible. I'm not precious about where ideas come
+            from - I care more about whether the end result helps someone and
+            solves the real problem.
             <br />
             <br />
-            Right now at Aurecon, I'm helping design and build tools that make
-            work easier for teams by bringing generative AI into their everyday
-            workflows.
+            I'm motivated by meaningful, human-impact work. I like building
+            products that make someone's job easier, save time, reduce confusion
+            or help a team work better together. I'm also a continuous learner.
+            Over the years I've built skills across software engineering, AI
+            tooling, psychology and neuroscience - mostly because I'm curious
+            and want to understand how things (and people) work. That curiosity
+            helps me ask better questions and make more grounded product
+            decisions.
             <br />
             <br />
-            Outside of work you'll usually find me reading, walking my dog,
-            playing board games with my family, or finding some outdoor trails
-            to explore 🥾
+            At the core, I like creating clarity. Whether it's a feature, a
+            workflow, a roadmap or a conversation - I want the end result to
+            feel organised, purposeful and easy to navigate. And when I'm not
+            focussed on that, outside of work you'll usually find me reading,
+            walking my dog, playing board games with my family, or finding some
+            outdoor walks to explore 🥾
           </p>
           <div className='flex flex-col items-center justify-center w-full'>
             <Image
