@@ -1,150 +1,235 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  /* Background */
-  --bg-gradient: linear-gradient(to bottom right, #FFD6FF, #C8B6FF, #BBD0FF);
-  --bg-color: #FEFEFEDD;
-  --navbar-bg-color: #FEFEFEDD;
+/* ─── Triadic brand palette ─────────────────────────────────────── */
+/* Blue  #94C5FF  →  strategy / interactive / primary               */
+/* Pink  #FF94C5  →  human / design / warmth                        */
+/* Lime  #C5FF94  →  engineering / code / build                     */
 
-  /* Colours */
-  --primary-text-colour: #000;
-  --primary-color: #FFD6FF;
-  --highlight-color: #FFF7D0;
-  --border-color: black;
-}
-
+/* ─── Theme: Dark ───────────────────────────────────────────────── */
+:root,
 [data-theme="dark"] {
-  /* Background */
-    --bg-gradient: linear-gradient(to bottom right, #3D003D, #24003D, #000D29);
-    --bg-color: #000000FE;
-    --navbar-bg-color: #00000095;
+  --bg:       #1A1D24;
+  --bg-alt:   #20242E;
+  --card-bg:  rgba(255, 255, 255, 0.05);
 
-    /* Colours */
-    --primary-text-colour: #FEFEFE;
-    --primary-color: #3D003D;
-    --highlight-color: #FFF7D0;
-    --border-color: #FEFEFE;
+  --text:       #FAF7F2;
+  --text-muted: #CBD5E1;
+
+  --border:        rgba(255, 255, 255, 0.30);
+  --border-hover:  rgba(255, 255, 255, 0.65);
+  --border-strong: rgba(255, 255, 255, 0.50);
+  --divider:       rgba(255, 255, 255, 0.55);
+
+  /* Pill nav — dark on dark theme */
+  --nav-bg:     rgba(26, 29, 36, 0.94);
+  --nav-text:   #FAF7F2;
+  --nav-logo:   #FAF7F2;
+  --nav-border: rgba(255, 255, 255, 0.15);
+
+  /* Buttons */
+  --btn-bg:               rgba(255, 255, 255, 0.05);
+  --btn-text:             #94C5FF;
+  --btn-border:           #94C5FF;
+  --btn-outline-border:   #94C5FF;
+  --btn-outline-text:     #94C5FF;
+  --btn-outline-hover-bg: rgba(148, 197, 255, 0.10);
+
+  /* Tags */
+  --tag-text:   rgba(203, 213, 225, 0.70);
+  --tag-border: rgba(255, 255, 255, 0.28);
+
+  /* Project / action buttons */
+  --proj-btn-bg:     rgba(255, 255, 255, 0.05);
+  --proj-btn-text:   #94C5FF;
+  --proj-btn-border: #94C5FF;
+
+  /* Brand accents */
+  --accent:   #94C5FF;
+  --accent-2: #FF94C5;
+  --accent-3: #C5FF94;
 }
 
+/* ─── Theme: Colour ─────────────────────────────────────────────── */
+[data-theme="colour"] {
+  --bg:     #FEFEFE;
+  --bg-alt: #FFF5FA;
+  --card-bg: #ffffff;
+
+  --text:       #111111;
+  --text-muted: #4B5563;
+
+  --border:        rgba(17, 17, 17, 0.20);
+  --border-hover:  rgba(17, 17, 17, 0.55);
+  --border-strong: rgba(17, 17, 17, 0.38);
+  --divider:       #111111;
+
+  /* Pill nav — cream on colour theme */
+  --nav-bg:     rgba(254, 254, 254, 0.96);
+  --nav-text:   #111111;
+  --nav-logo:   #111111;
+  --nav-border: rgba(0, 0, 0, 0.08);
+
+  /* Buttons */
+  --btn-bg:               #1A1D24;
+  --btn-text:             #FAF7F2;
+  --btn-border:           #1A1D24;
+  --btn-outline-border:   rgba(17, 17, 17, 0.38);
+  --btn-outline-text:     #111111;
+  --btn-outline-hover-bg: rgba(17, 17, 17, 0.05);
+
+  /* Tags */
+  --tag-text:   rgba(17, 17, 17, 0.55);
+  --tag-border: rgba(17, 17, 17, 0.28);
+
+  /* Project / action buttons */
+  --proj-btn-bg:     #1A1D24;
+  --proj-btn-text:   #FAF7F2;
+  --proj-btn-border: #1A1D24;
+
+  /* Brand accents */
+  --accent:   #4A7FCC;
+  --accent-2: #C2347A;
+  --accent-3: #4D8C1C;
+}
+
+/* ─── Base styles ───────────────────────────────────────────────── */
 @layer base {
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  h1 {
-    @apply font-heading font-bold text-6xl sm:text-6xl md:text-7xl lg:text-9xl 
-  }
-
-  h2 {
-    @apply text-4xl sm:text-5xl lg:text-7xl
-  }
-
-  h3 {
-    @apply text-xl lg:text-3xl py-3
-  }
-
-  h2, h3, h4, h5, h6 {
-    @apply font-heading
-  }
-
-  p, li {
-    @apply tracking-wide leading-8 font-normal font-body
-  }
-
-  figcaption {
-    @apply text-[0.8rem] text-center pt-5 text-gray-400 tracking-wide
-  }
-
-  button {
-    background-color: var(--primary-color);
-    border-color: var(--border-color);
-    @apply px-8 py-4 rounded-md border hover:scale-110 transition ease-in-out duration-300 text-lg
-  }
+  html { scroll-behavior: smooth; }
 
   body {
-    color: var(--primary-text-colour);
-    background: var(--bg-color);
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.4s ease, color 0.4s ease;
   }
 
-  @keyframes hover-animation {
-    0% {
-        background-color: #FFD6FF;
-    }
-    50% {
-        background-color: #C8B6FF;
-    }
-    100% {
-        background-color: #BBD0FF;
-    }
-  }
-  
-  .hover-bg:hover {
-    animation: hover-animation 1s infinite alternate;
-    color: black;
+  h1, h2, h3, h4, h5, h6 { @apply font-heading font-bold; }
+
+  p, li { @apply tracking-wide leading-8 font-normal font-body; }
+
+  figcaption {
+    @apply text-xs text-center pt-4 tracking-wide;
+    color: var(--text-muted);
   }
 }
 
+/* ─── Components ────────────────────────────────────────────────── */
 @layer components {
-
-  /* Global */
-
-  .navbar {
-    background-color: var(--navbar-bg-color);
+  /* Nav link base — pill hover handled via JS inline styles */
+  .nav-link {
+    @apply font-heading text-sm font-semibold tracking-wide px-3 py-1.5 rounded-full transition-all duration-200;
+    color: var(--nav-text);
   }
 
-  /* Hero */
-
-  .hero {
-    background: var(--bg-gradient);
-    border-color: var(--border-color);
+  /* Card */
+  .themed-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--divider);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   }
-  
-
-  /* Case Study */
-  
-  .sub-heading {
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    padding-bottom: 1.5rem;
+  .themed-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.10);
   }
-  
-  .case-study-ul li {
-    padding-left: 1.5rem;
-    list-style-type: disc;
-    list-style-position: inside;
-  }
-  
-  .case-study-ol li {
-    padding-left: 1.5rem;
-    list-style-type: decimal;
-    list-style-position: inside;
+  [data-theme="dark"] .themed-card:hover {
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.40);
   }
 
-  .case-image {
-    background-color: white;
-    border-radius: 10px;
-    padding: 5px;
+  /* Primary button */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-heading font-semibold text-sm tracking-wide transition-all duration-200 active:scale-95;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: 1.5px solid var(--btn-border);
   }
+  .btn-primary:hover { opacity: 0.80; }
+
+  /* Outline button */
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-heading font-semibold text-sm tracking-wide transition-all duration-200 active:scale-95;
+    border: 1.5px solid var(--btn-outline-border);
+    color: var(--btn-outline-text);
+    background: transparent;
+  }
+  .btn-outline:hover {
+    background-color: var(--btn-outline-hover-bg);
+    border-color: var(--border-strong);
+  }
+
+  /* Case study legacy */
+  .sub-heading { font-size: 14px; text-transform: uppercase; letter-spacing: 4px; padding-bottom: 1.5rem; }
+  .case-study-ul li { padding-left: 1.5rem; list-style-type: disc; list-style-position: inside; }
+  .case-study-ol li { padding-left: 1.5rem; list-style-type: decimal; list-style-position: inside; }
+  .case-image { background-color: white; border-radius: 10px; padding: 5px; }
 }
 
+/* ─── Utilities ─────────────────────────────────────────────────── */
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+  .text-balance { text-wrap: balance; }
+  .animation-delay-3000 { animation-delay: 3s; }
+  .animation-delay-6000 { animation-delay: 6s; }
+}
 
-  .animation-delay-4000 {
-    animation-delay: 4s;
-  }
+/* ─── Highlighter marks ──────────────────────────────────────────── */
+/* Colour theme: translucent background */
+[data-theme="colour"] {
+  --hl-blue: rgba(148, 197, 255, 0.52);
+  --hl-pink: rgba(255, 148, 197, 0.48);
+  --hl-lime: rgba(197, 255, 148, 0.55);
+}
+/* Dark theme: coloured bold text instead of bg highlight */
+[data-theme="dark"] {
+  --hl-blue: transparent;
+  --hl-pink: transparent;
+  --hl-lime: transparent;
+}
+[data-theme="dark"] .hl-blue { color: #94C5FF; font-weight: 600; }
+[data-theme="dark"] .hl-pink { color: #FF94C5; font-weight: 600; }
+[data-theme="dark"] .hl-lime { color: #C5FF94; font-weight: 600; }
 
-  .animation-delay-8000 {
-    animation-delay: 8s;
-  }
+/* Active state — when matching WhatIDo card is hovered */
+[data-theme="colour"] .hl-blue.hl-active { background: rgba(148, 197, 255, 0.82); }
+[data-theme="colour"] .hl-pink.hl-active { background: rgba(255, 148, 197, 0.76); }
+[data-theme="colour"] .hl-lime.hl-active { background: rgba(197, 255, 148, 0.85); }
+[data-theme="dark"] .hl-blue.hl-active   { color: #94C5FF; filter: brightness(1.4); }
+[data-theme="dark"] .hl-pink.hl-active   { color: #FF94C5; filter: brightness(1.4); }
+[data-theme="dark"] .hl-lime.hl-active   { color: #C5FF94; filter: brightness(1.4); }
+
+.hl-blue, .hl-pink, .hl-lime {
+  display: inline;
+  border-radius: 3px;
+  padding: 1px 4px;
+  margin: 0 -2px;
+  background: var(--hl-blue, transparent);
+  transition: background 0.35s ease, color 0.35s ease, filter 0.35s ease;
+}
+.hl-blue  { background: var(--hl-blue); }
+.hl-pink  { background: var(--hl-pink); }
+.hl-lime  { background: var(--hl-lime); }
+
+/* ─── SVG circle draw ────────────────────────────────────────────── */
+@keyframes draw-circle {
+  to { stroke-dashoffset: 0; }
+}
+.circle-animate {
+  stroke-dasharray: 450;
+  stroke-dashoffset: 450;
+  animation: draw-circle 1.3s cubic-bezier(0.4, 0, 0.2, 1) 0.5s forwards;
+}
+
+/* ─── Tag dot separators ─────────────────────────────────────────── */
+.tag-dot-list {
+  @apply text-[10px] font-body uppercase tracking-widest;
+  color: var(--text-muted);
+}
+.tag-dot-list .dot {
+  color: var(--accent);
+  margin: 0 5px;
+}
+
+/* ─── Transition all themed elements ────────────────────────────── */
+.themed-card, .btn-primary, .btn-outline, .nav-link {
+  transition-property: background-color, border-color, color, box-shadow, opacity, transform;
+  transition-duration: 250ms;
 }

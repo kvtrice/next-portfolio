@@ -1,37 +1,94 @@
 'use client';
 
 import React from 'react';
+import { useTheme } from './ThemeProvider';
+
 const Hero = () => {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
+
+  const headingColor  = isDark ? '#FAF7F2' : '#1A1D24';
+  const subtitleColor = isDark ? 'rgba(250,247,242,0.55)' : 'rgba(26,29,36,0.60)';
+  const calloutColor  = isDark ? '#FF94C5' : '#1A1D24';   /* pink on dark */
+  const circleColor   = isDark ? '#94C5FF' : '#1A1D24';   /* blue circle on dark */
+
   return (
-    <div id='home' className='hero border-b relative overflow-hidden'>
-      <div className='max-w-[1600px] text-center w-full h-screen mx-auto p-2 justify-center items-center flex flex-col'>
-        {/* Blurry blobs behind text */}
-        <div className='inset-0 flex justify-center items-center'>
-          <div className='absolute top-1/2 left-1/4 transform -translate-x-48% -translate-y-1/2 z-0 ease-in-out transition-transform duration-300'>
-            <div className='w-72 h-72 lg:h-96 lg:w-96 bg-white rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob animation-delay-4000 z-0'></div>
-          </div>
-          <div className='absolute top-1/2 right-1/4 transform translate-x-48% -translate-y-1/2 z-0 ease-in-out transition-transform duration-300'>
-            <div className='w-72 h-72 lg:h-96 lg:w-96 bg-pink rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob animation-delay-8000 z-0'></div>
-          </div>
-          <div className='absolute top-1/2 transform -translate-y-1/2 z-0 ease-in-out transition-transform duration-300'>
-            <div className='w-72 h-72 lg:h-96 lg:w-96 bg-highlight rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob z-0'></div>
-          </div>
-        </div>
-        {/* Hero content */}
-        <div className='my-9 z-10'>
-          <h1 className='mt-20 py-4'>Hey I'm Kat,</h1>
-          <h1 className='pb-5 px-5'>A Product Manager</h1>
-          <h3 className='pb-5 px-20'>
-            with a background across software engineering, AI and Product
-            Design, specialising in translating complex problems into simple
-            solutions.
-          </h3>
-          <a href='#projects'>
-            <button className='mt-10'>View My Projects</button>
-          </a>
-        </div>
+    <section
+      id='home'
+      className='min-h-screen flex items-center pt-24 relative overflow-hidden'
+      style={{
+        background: isDark
+          ? '#1A1D24'
+          : `linear-gradient(135deg, #FF94C5 0%, #94C5FF 100%)`,
+      }}
+    >
+      <div className='relative z-10 max-w-6xl mx-auto px-6 py-16 w-full'>
+        <h1
+          className='text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] leading-[1.05] font-bold mb-8'
+          style={{ color: headingColor }}
+        >
+          Hey, I&apos;m Kat, a Product
+          <br />
+          Manager who actually
+          <br />
+          knows how to{' '}
+          <span className='relative inline-block'>
+            <span className='font-display italic' style={{ color: calloutColor }}>
+              build
+            </span>
+            <svg
+              aria-hidden='true'
+              xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 200 60'
+              preserveAspectRatio='none'
+              fill='none'
+              style={{
+                position: 'absolute',
+                top: '-10%',
+                left: '-10%',
+                width: '120%',
+                height: '120%',
+                overflow: 'visible',
+                pointerEvents: 'none',
+              }}
+            >
+              <ellipse
+                cx='100'
+                cy='30'
+                rx='93'
+                ry='26'
+                stroke={circleColor}
+                strokeWidth='3.5'
+                strokeLinecap='round'
+                className='circle-animate'
+              />
+            </svg>
+          </span>{' '}
+          it.
+        </h1>
+
+        <p
+          className='text-lg max-w-xl leading-7 mb-10 font-body'
+          style={{ color: subtitleColor }}
+        >
+          Background in software engineering, AI and product design.
+          Specialising in translating complex problems into simple solutions.
+        </p>
+
+        <a href='#work' className='btn-primary'>
+          See My Work
+          <svg width='15' height='15' viewBox='0 0 16 16' fill='none' aria-hidden='true'>
+            <path
+              d='M8 3L13 8L8 13M3 8H13'
+              stroke='currentColor'
+              strokeWidth='1.5'
+              strokeLinecap='round'
+              strokeLinejoin='round'
+            />
+          </svg>
+        </a>
       </div>
-    </div>
+    </section>
   );
 };
 

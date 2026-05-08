@@ -3,70 +3,137 @@ import Image from 'next/image';
 
 const About = () => {
   return (
-    <div className=''>
-      <div
-        id='about'
-        className='w-full p-2 py-16 max-w-[1100px] m-auto flex justify-center items-center flex-col'
-      >
-        <h2 className='px-5 md:pb-10'>About</h2>
-        <div className='grid md:grid-cols-3 grid-cols-1 md:p-0 place-items-center m-10 lg:m-0'>
-          <p className='col-span-2 font-normal order-last md:order-first text-center md:pr-8 md:text-left pt-8 md:pt-0 leading-8 text-[#484138]'>
-            Hey I'm Kat 👋 A Product Manager who likes making things clearer,
-            simpler, and easier for people to use. Most of my work sits at the
-            intersection of product, design, and engineering. I enjoy diving
-            into messy or unclear problems, understanding what people are
-            actually trying to do and then shaping a solution that genuinely
-            helps.
-            <br />
-            <br />
-            My background includes product management, UX thinking, and enough
-            hands-on engineering to collaborate closely with developers and
-            understand what's feasible. I'm not precious about where ideas come
-            from - I care more about whether the end result helps someone and
-            solves the real problem.
-            <br />
-            <br />
-            I'm motivated by meaningful, human-impact work. I like building
-            products that make someone's job easier, save time, reduce confusion
-            or help a team work better together. I'm also a continuous learner.
-            Over the years I've built skills across software engineering, AI
-            tooling, psychology and neuroscience - mostly because I'm curious
-            and want to understand how things (and people) work. That curiosity
-            helps me ask better questions and make more grounded product
-            decisions.
-            <br />
-            <br />
-            At the core, I like creating clarity. Whether it's a feature, a
-            workflow, a roadmap or a conversation - I want the end result to
-            feel organised, purposeful and easy to navigate. And when I'm not
-            focussed on that, outside of work you'll usually find me reading,
-            walking my dog, playing board games with my family, or finding some
-            outdoor walks to explore 🥾
-          </p>
-          <div className='flex flex-col items-center justify-center w-full'>
-            <Image
-              src='/assets/kat.png'
-              alt='Picture of Katrice Mountford'
-              width={600}
-              height={600}
-              style={{
-                objectFit: 'cover',
-                fill: 'true',
-              }}
-              className='pt-5 rounded-t-full bg-blue border-t border-r border-l border-black'
-            />
-            <button className='w-[100%] max-w-[600px] bg-pink rounded-none'>
-              <a
-                href='/katrice_mountford_resume.pdf'
-                download='katrice_mountford_resume'
+    <section
+      id='about'
+      className='py-24'
+      style={{ backgroundColor: 'var(--bg)', borderTop: '1px solid var(--divider)' }}
+    >
+      <div className='max-w-6xl mx-auto px-6'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-12 items-start'>
+
+          {/* Photo — registration mark corner brackets */}
+          <div className='flex justify-center md:justify-start'>
+            {/*
+              Corner brackets sit outside the photo boundary by 6px.
+              Blue (#94C5FF) top corners, coral (#FF94C5) bottom corners.
+              Outer wrapper has padding to show the brackets.
+            */}
+            <div className='relative p-2'>
+              {/* Photo */}
+              <div
+                className='rounded-lg overflow-hidden'
+                style={{ width: '220px', height: '290px' }}
               >
-                Download Resume
-              </a>
-            </button>
+                <Image
+                  src='/assets/kat.png'
+                  alt='Katrice Mountford'
+                  fill
+                  className='object-cover'
+                  sizes='220px'
+                />
+              </div>
+
+              {/* ┌ top-left — blue */}
+              <div
+                className='absolute'
+                style={{
+                  top: 0, left: 0,
+                  width: '28px', height: '28px',
+                  borderTop: '2.5px solid #94C5FF',
+                  borderLeft: '2.5px solid #94C5FF',
+                }}
+              />
+              {/* ┐ top-right — blue */}
+              <div
+                className='absolute'
+                style={{
+                  top: 0, right: 0,
+                  width: '28px', height: '28px',
+                  borderTop: '2.5px solid #94C5FF',
+                  borderRight: '2.5px solid #94C5FF',
+                }}
+              />
+              {/* └ bottom-left — coral */}
+              <div
+                className='absolute'
+                style={{
+                  bottom: 0, left: 0,
+                  width: '28px', height: '28px',
+                  borderBottom: '2.5px solid #FF94C5',
+                  borderLeft: '2.5px solid #FF94C5',
+                }}
+              />
+              {/* ┘ bottom-right — coral */}
+              <div
+                className='absolute'
+                style={{
+                  bottom: 0, right: 0,
+                  width: '28px', height: '28px',
+                  borderBottom: '2.5px solid #FF94C5',
+                  borderRight: '2.5px solid #FF94C5',
+                }}
+              />
+            </div>
           </div>
+
+          {/* Text — 2/3 columns */}
+          <div className='md:col-span-2'>
+            <h2
+              className='text-4xl sm:text-5xl leading-tight mb-8'
+              style={{ color: 'var(--text)' }}
+            >
+              I make messy
+              <br />
+              problems simple.
+            </h2>
+
+            <div
+              className='space-y-5 text-base font-body'
+              style={{ color: 'var(--text-muted)' }}
+            >
+              <p>
+                Hey I&apos;m Kat 👋 A Product Manager who likes making things{' '}
+                <span className='hl-pink'>clearer, simpler, and easier</span> for people to use. Most of my work
+                sits at the intersection of product, design, and engineering. I
+                enjoy diving into messy or unclear problems, understanding what
+                people are actually trying to do and then shaping a solution that
+                genuinely helps.
+              </p>
+              <p>
+                My background includes product management, UX thinking, and{' '}
+                <span className='hl-lime'>enough hands-on engineering</span> to
+                collaborate closely with developers and understand what&apos;s
+                feasible. I&apos;m not precious about where
+                ideas come from. I care more about whether the end result
+                helps someone and solves the real problem.
+              </p>
+              <p>
+                I&apos;m motivated by{' '}
+                <span className='hl-pink'>meaningful, human-impact work</span>. I like
+                building products that make someone&apos;s job easier, save time,
+                reduce confusion or help a team work better together. I&apos;m
+                also a continuous learner. Over the years I&apos;ve built skills
+                across software engineering, AI tooling, psychology and
+                neuroscience, mostly because I&apos;m curious and want to
+                understand how things (and people) work. That curiosity helps me
+                ask better questions and make more grounded product decisions.
+              </p>
+              <p>
+                At the core, I like{' '}
+                <span className='hl-blue'>creating clarity</span>. Whether it&apos;s a
+                feature, a workflow, a roadmap or a conversation. I want
+                the end result to feel organised, purposeful and easy to navigate.
+                And when I&apos;m not focussed on that, outside of work you&apos;ll
+                usually find me reading, walking my dog, playing board games with
+                my family, or finding some outdoor walks to explore 🥾
+              </p>
+            </div>
+
+          </div>
+
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -2,26 +2,31 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
-
-import { Bricolage_Grotesque, Poppins } from 'next/font/google';
+import ThemeProvider from './ThemeProvider';
+import { Bricolage_Grotesque, Poppins, Paprika } from 'next/font/google';
 
 const bricolage = Bricolage_Grotesque({
   subsets: ['latin'],
   variable: '--font-heading',
-  // specify weights you actually use
   weight: ['200', '300', '400', '500', '600', '700', '800'],
 });
 
 const poppins = Poppins({
   subsets: ['latin'],
   variable: '--font-body',
-  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  weight: ['300', '400', '500', '600', '700'],
+});
+
+const paprika = Paprika({
+  subsets: ['latin'],
+  variable: '--font-display',
+  weight: '400',
 });
 
 export const metadata: Metadata = {
   title: 'Katrice Mountford',
   description:
-    'Katrice Mountford is a tech professional with a background in UX/UI Design, Product Management, Software Engineering and Customer Experience, she specializes in building engaging, accessible, and high-performing web experiences. She thrives on collaboration, design-driven development, and continuous learning to create seamless, impactful digital products.',
+    'Product Manager with a background in software engineering, AI and product design. Specialising in translating complex problems into simple solutions.',
 };
 
 export default function RootLayout({
@@ -30,11 +35,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' data-theme=''>
-      <body className={`${bricolage.variable} ${poppins.variable} font-body`}>
-        <Navbar />
-        {children}
-        <Footer />
+    <html lang='en'>
+      <body
+        className={`${bricolage.variable} ${poppins.variable} ${paprika.variable} font-body antialiased`}
+      >
+        <ThemeProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

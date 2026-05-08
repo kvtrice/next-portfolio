@@ -1,70 +1,61 @@
-import React from "react";
+import React from 'react';
 
 const Footer = () => {
   return (
-		<div id="footer" className="w-full bg-pink border-t border-black">
-			<div className="max-w-[1000px] m-auto px-2 w-full pt-20">
-				<div className="m-5 flex flex-col md:flex-row justify-between items-center md:items-start">
-					<h3 className="text-5xl text-center md:text-left lg:text-6xl">
-						Get in touch
-					</h3>
-					<div className="flex md:flex-row flex-col items-center text-center md:items-start md:text-left">
-						<div className="px-10 my-4 md:my-0">
-							<p className="text-xl font-heading font-[500] py-5">
-								Find me online
-							</p>
-							<ul>
-								<li className="py-1 hover:underline">
-									<a
-										href="https://www.linkedin.com/in/katmountford/"
-										target="_blank"
-									>
-										LinkedIn
-									</a>
-								</li>
-								<li className="py-1 hover:underline">
-									<a
-										href="https://github.com/kvtrice"
-										target="_blank"
-									>
-										Github
-									</a>
-								</li>
-								<li className="py-1 hover:underline">
-									<a
-										href="mailto:katricemountford@gmail.com"
-										target="_blank"
-									>
-										Email
-									</a>
-								</li>
-							</ul>
-						</div>
-						<div className="px-10">
-							<p className="text-xl font-heading font-[500] py-5">
-								Projects
-							</p>
-							<ul>
-								<li className="py-1 hover:underline">
-									<a
-										href="https://sproutlyapp.vercel.app"
-										target="_blank"
-									>
-										Sproutly
-									</a>
-								</li>
-								<li className="py-1 hover:underline">
-									<a href="/talktomaple">Talk to Maple</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<p className="pt-20 pb-20 ml-5 text-center md:text-left text-sm font-heading">
-					&#169; Katrice Mountford 2024
-				</p>
-			</div>
-		</div>
+    <footer
+      id='footer'
+      className='py-24'
+      style={{
+        backgroundColor: 'var(--bg)',
+        borderTop: '1px solid var(--divider)',
+      }}
+    >
+      <div className='max-w-6xl mx-auto px-6'>
+        {/* Main CTA */}
+        <div className='mb-20'>
+          <h2
+            className='text-5xl sm:text-6xl lg:text-7xl leading-tight mb-10'
+            style={{ color: 'var(--text)' }}
+          >
+            Let&apos;s work
+            <br />
+            <span className='font-display italic'>together</span>.
+          </h2>
+          <a href='mailto:katricemountford@gmail.com' className='btn-primary text-base'>
+            katricemountford@gmail.com
+          </a>
+        </div>
+
+        {/* Bottom row — links + copyright */}
+        <div
+          className='flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 pt-10'
+          style={{ borderTop: '1px solid var(--divider)' }}
+        >
+          <nav className='flex gap-6 flex-wrap'>
+            {[
+              { href: 'https://www.linkedin.com/in/katmountford/', label: 'LinkedIn' },
+              { href: 'https://github.com/kvtrice', label: 'GitHub' },
+              { href: '/talktomaple', label: 'Talk to Maple' },
+            ].map(({ href, label }) => (
+              <a
+                key={label}
+                href={href}
+                target={href.startsWith('http') ? '_blank' : undefined}
+                rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                className='text-sm font-body transition-opacity duration-200 hover:opacity-100'
+                style={{ color: 'var(--text-muted)' }}
+              >
+                {label}
+              </a>
+            ))}
+          </nav>
+
+          <p className='text-xs font-body' style={{ color: 'var(--text-muted)' }}>
+            &copy; {new Date().getFullYear()} Katrice Mountford
+          </p>
+        </div>
+      </div>
+    </footer>
   );
 };
 

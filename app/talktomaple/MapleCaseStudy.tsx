@@ -12,54 +12,34 @@ import MapleResults from './MapleResults';
 import MapleHero from './MapleHero';
 import MapleFinalThoughts from './MapleFinalThoughts';
 
+const SECTION = 'py-16 px-5 max-w-[800px] mx-auto w-full';
+const SECTION_TINTED = 'py-16 px-5 bg-purple/10 w-full';
+const INNER = 'max-w-[800px] mx-auto w-full';
+
 const MapleCaseStudy = () => {
   return (
     <div className='w-full'>
-      <div className='flex flex-col mx-auto'>
-        <div className=' w-full justify-center items-center'>
-          <MapleHero />
-          <div className='pt-10 px-5'>
-            {/* Overview */}
-            <MapleOverview />
-          </div>
-          <div className='py-10 px-5'>
-            {/* Challenge & Goal */}
-            <MapleChallengeGoal />
-          </div>
-          <div className='bg-purple/15 py-10 px-5'>
-            {/* Discover */}
-            <MapleDiscover />
-          </div>
-          <div className='py-20 px-5'>
-            {/* Define */}
-            <MapleDefine />
-          </div>
-          <div className='bg-purple/15 py-20 px-5'>
-            {/* Revising our approach */}
-            <MapleRevisedApproach />
-          </div>
-          <div className='py-20 px-5'>
-            {/* MVP */}
-            <MapleMVP />
-          </div>
-          <div className='bg-purple/15 py-20 px-5'>
-            {/* MVP Learnings */}
-            <MapleMVPLearnings />
-          </div>
-          <div className='py-20 px-5'>
-            {/* Bringing it to Life */}
-            <MapleV2 />
-          </div>
-          <div className='bg-purple/15 py-20 px-5'>
-            {/* Outcome */}
-            <MapleResults />
-          </div>
-          <div className='py-20 px-5'>
-            {/* Final Thoughts */}
-            <MapleFinalThoughts />
-          </div>
-        </div>
-      </div>
+      <MapleHero />
+
+      <div className={SECTION}><MapleOverview /></div>
+
+      <div className={SECTION_TINTED}><div className={INNER}><MapleChallengeGoal /></div></div>
+
+      <div className={SECTION}><MapleDiscover /></div>
+
+      <div className={SECTION_TINTED}><div className={INNER}><MapleDefine /></div></div>
+
+      <div className={SECTION}><MapleRevisedApproach /></div>
+
+      <div className={SECTION_TINTED}><div className={INNER}><MapleMVP /></div></div>
+
+      <div className={SECTION}><MapleMVPLearnings /></div>
+
+      <div className={SECTION_TINTED}><div className={INNER}><MapleV2 /></div></div>
+
+      <div className={SECTION}><MapleResults /></div>
+
+      <div className={SECTION_TINTED}><div className={INNER}><MapleFinalThoughts /></div></div>
     </div>
   );
 };
