@@ -60,7 +60,7 @@ const MapleFinalThoughts = () => {
           <br />
           The Antler program was incredibly intense and high pressure, and there
           were so many learnings that came out of it, but one of the big ones
-          would have to be how invaluable having the <strong>
+          would have to be how invaluable having the <strong className='hl-blue'>
             right data
           </strong>{' '}
           is. As a team we were data geeks (with one co-founder even being a
@@ -71,12 +71,12 @@ const MapleFinalThoughts = () => {
           This definitely took a bit more time and effort, but turned out to be
           one of the best decisions we made. This helped not only build our
           credibility with the investment team but above all helped us make the{' '}
-          <strong>best decisions possible</strong> for our app and our users.
+          the best decisions possible for our app and our users.
           <br />
           <br />
           With such intense timelines we also had to prioritise our time; each
           day we focussed on the number one highest impact item we could be
-          doing that takes us <strong>towards our goal</strong> of retained and
+          doing that takes us towards our goal of retained and
           engaged users. Having this clear north star helped us{' '}
           <strong>make trade-offs ruthlessly</strong> and move the needle as far
           as possible in the time we had. It did mean that other (also

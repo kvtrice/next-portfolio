@@ -22,7 +22,7 @@ const MapleRevisedApproach = () => {
           Initially this felt like a major setback; the whole premise of our app
           seemed to go down the drain without the conversational style
           journaling. Soon afterwards I was using Duolingo and had a
-          <strong>lightbulb moment</strong>. They had this brilliant way of
+          <strong className='hl-pink'>lightbulb moment</strong>. They had this brilliant way of
           structuring lessons: one question per page, and you had to hit
           "submit" to move on. It kept you laser-focused on the task at hand and
           made everything feel doable, without overwhelming you with a wall of
@@ -33,7 +33,7 @@ const MapleRevisedApproach = () => {
           journaling? A step-by-step process, one page at a time. From a
           technical standpoint, we could handle the API response upon
           submission, and that solved our earlier woes. Plus, I had a hunch that
-          it would actually provide a<strong>better experience</strong> for our
+          it would actually provide a better experience for our
           users. More focus, bite-sized "missions," and less effort to complete
           a journal entry (which we discovered as a pain point in our user
           research).
@@ -82,14 +82,14 @@ const MapleRevisedApproach = () => {
       <div>
         <p>
           To gauge user engagement with the AI, we also
-          <strong>conducted an experiment</strong> involving mental health
+          conducted an experiment involving mental health
           professionals and users. The AI was hosted in a web browser, and we
           provided pre-set prompts from the perspective of our chosen digital
           companion; a puppy named Maple.
           <br />
           <br />
           From the experiment, we observed that users tended to{' '}
-          <strong>disengage</strong> after approximately 4-5 exchanges. The key
+          disengage after approximately 4-5 exchanges. The key
           contributor being the AI's repetitive nature and excessive focus on
           asking "Why" repeatedly. This reinforced the decision to pursue a
           staged journaling approach instead of the WhatsApp conversational
@@ -97,7 +97,7 @@ const MapleRevisedApproach = () => {
           <br />
           <br />
           Additionally, mental health professionals emphasised the importance of
-          incorporating a <strong>red flag check</strong>. They stressed that if
+          incorporating a <strong className='hl-lime'>red flag check</strong>. They stressed that if
           a user expresses self-harm or engages in extremely sensitive or
           harmful discussion, the AI needs to be able to recognise its
           limitations and provide appropriate resources.

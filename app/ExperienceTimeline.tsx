@@ -130,14 +130,11 @@ function RoleCard({ role, isEven }: { role: Role; isEven: boolean }) {
             <span className='font-heading font-bold text-3xl leading-none' style={{ color: role.accent }}>
               {role.number}
             </span>
-            <div>
-              <p className='font-heading font-bold text-base leading-snug' style={{ color: 'var(--text)' }}>
-                {role.company}
-              </p>
-              <p className='text-xs font-body' style={{ color: 'var(--text-muted)' }}>
-                {role.role}
-              </p>
-            </div>
+            <p className='font-heading font-bold text-base leading-snug'>
+              <span style={{ color: 'var(--text)' }}>{role.role}</span>
+              <span style={{ color: 'var(--text-muted)', fontWeight: 400 }}> at </span>
+              <span style={{ color: role.accent }}>{role.company}</span>
+            </p>
           </div>
           <div className='text-right flex-shrink-0'>
             <p className='text-xs font-body' style={{ color: role.accent }}>{role.period}</p>
@@ -217,7 +214,7 @@ const ExperienceTimeline = () => {
             href='https://www.linkedin.com/in/katmountford/'
             target='_blank'
             rel='noopener noreferrer'
-            className='btn-outline'
+            className='btn-primary'
           >
             Full profile on LinkedIn ↗
           </a>

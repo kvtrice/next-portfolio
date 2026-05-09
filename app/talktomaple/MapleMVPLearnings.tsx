@@ -107,7 +107,7 @@ const MapleMVPLearnings = () => {
           <br />
           <br />
           After conducting internal testing, we discovered that ChatGPT 3.5
-          Turbo generated more <strong>engaging</strong> and on-brand responses,
+          Turbo generated more engaging and on-brand responses,
           exhibiting a conversational and personable tone. However, Turbo didn't
           strictly adhere to instructions during the final journaling stage,
           continuing the conversation indefinitely. On the other hand, DaVinci
@@ -116,7 +116,7 @@ const MapleMVPLearnings = () => {
           the ability to respond to multiple threads within a single response.
           <br />
           <br />
-          To <strong>strike a balance</strong> between conversational engagement
+          To <strong className='hl-blue'>strike a balance</strong> between conversational engagement
           and summarisation, we decided to implement a hybrid approach. We used
           ChatGPT 3.5 Turbo for the first two parts of the journaling process
           and ChatGPT 3 DaVinci for the final part, which required a concise and
@@ -129,14 +129,14 @@ const MapleMVPLearnings = () => {
         <br />
         <p>
           To gather feedback on user sentiment and evaluate the
-          <strong>effectiveness</strong> of our journal prompts, we implemented
+          effectiveness of our journal prompts, we implemented
           a simple 3-point feedback scale. This allowed us to keep the feedback
           process easy to understand for the user, and remain fun, light-hearted
           and not feel like a chore following their journaling.
           <br />
           <br />
           We made the decision to have the feedback options be represented as
-          <strong>emoji's</strong> - the Talk to Maple brand is fun and I wanted
+          emojis — the Talk to Maple brand is fun and I wanted
           giving feedback to feel fun too. We also opted for a forced action,
           with the emoji selections becoming the only way to proceed to the
           rewards screen following their journal mission.

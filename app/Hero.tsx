@@ -29,7 +29,7 @@ const Hero = () => {
         >
           Hey, I&apos;m Kat, a Product
           <br />
-          Manager who actually
+          Manager who also
           <br />
           knows how to{' '}
           <span className='relative inline-block'>

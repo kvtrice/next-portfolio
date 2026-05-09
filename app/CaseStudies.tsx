@@ -1,4 +1,3 @@
-import React from 'react';
 import CaseStudyCard from './CaseStudyCard';
 
 const CaseStudies = () => {
@@ -18,9 +17,9 @@ const CaseStudies = () => {
             href='/talktomaple'
             year='2023'
             stats={[
-              { value: 85, suffix: '',  label: 'users in week one',   color: '#94C5FF' },
-              { value: 95, suffix: '%', label: 'felt same or better', color: '#FF94C5' },
-              { value: 8,  suffix: '',  label: 'weeks to launch',     color: '#C5FF94' },
+              { value: 85, suffix: '',  label: 'users in week one',   color: 'var(--accent)'   },
+              { value: 95, suffix: '%', label: 'felt same or better', color: 'var(--accent-2)' },
+              { value: 8,  suffix: '',  label: 'weeks to launch',     color: 'var(--accent-3)' },
             ]}
           />
 

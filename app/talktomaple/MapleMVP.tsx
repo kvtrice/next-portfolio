@@ -41,8 +41,8 @@ const MapleMVP = () => {
       <div>
         <p>
           We had positive early signals, with a low Cost Per Click (CPC),
-          showing that our <strong>ad was effective</strong>, and we gained
-          <strong>85 users</strong> in the first week of our MVP being live
+          showing that our ad was effective, and we gained
+          <strong className='hl-blue'>85 users</strong> in the first week of our MVP being live
           (users in this scenario = people that downloaded, opened and completed
           at least 1 journaling session within the app).
           <br />

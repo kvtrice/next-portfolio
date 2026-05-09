@@ -18,61 +18,32 @@ const About = () => {
               Blue (#94C5FF) top corners, coral (#FF94C5) bottom corners.
               Outer wrapper has padding to show the brackets.
             */}
-            <div className='relative p-2'>
-              {/* Photo */}
+            {/* Gradient border — outer div IS the gradient, inner is the bg fill */}
+            <div
+              style={{
+                background: 'linear-gradient(135deg, #94C5FF 0%, #FF94C5 55%, #C5FF94 100%)',
+                padding: '4px',
+                borderRadius: '16px',
+                boxShadow: '0 0 36px 8px rgba(148,197,255,0.18)',
+              }}
+            >
               <div
-                className='rounded-lg overflow-hidden'
-                style={{ width: '220px', height: '290px' }}
+                className='relative overflow-hidden'
+                style={{
+                  width: '250px',
+                  height: '320px',
+                  borderRadius: '12px',
+                  backgroundColor: 'var(--bg)',
+                }}
               >
                 <Image
-                  src='/assets/kat.png'
+                  src='/assets/kat_new.png'
                   alt='Katrice Mountford'
                   fill
-                  className='object-cover'
-                  sizes='220px'
+                  className='object-cover object-top'
+                  sizes='250px'
                 />
               </div>
-
-              {/* ┌ top-left — blue */}
-              <div
-                className='absolute'
-                style={{
-                  top: 0, left: 0,
-                  width: '28px', height: '28px',
-                  borderTop: '2.5px solid #94C5FF',
-                  borderLeft: '2.5px solid #94C5FF',
-                }}
-              />
-              {/* ┐ top-right — blue */}
-              <div
-                className='absolute'
-                style={{
-                  top: 0, right: 0,
-                  width: '28px', height: '28px',
-                  borderTop: '2.5px solid #94C5FF',
-                  borderRight: '2.5px solid #94C5FF',
-                }}
-              />
-              {/* └ bottom-left — coral */}
-              <div
-                className='absolute'
-                style={{
-                  bottom: 0, left: 0,
-                  width: '28px', height: '28px',
-                  borderBottom: '2.5px solid #FF94C5',
-                  borderLeft: '2.5px solid #FF94C5',
-                }}
-              />
-              {/* ┘ bottom-right — coral */}
-              <div
-                className='absolute'
-                style={{
-                  bottom: 0, right: 0,
-                  width: '28px', height: '28px',
-                  borderBottom: '2.5px solid #FF94C5',
-                  borderRight: '2.5px solid #FF94C5',
-                }}
-              />
             </div>
           </div>
 
@@ -82,7 +53,7 @@ const About = () => {
               className='text-4xl sm:text-5xl leading-tight mb-8'
               style={{ color: 'var(--text)' }}
             >
-              I make messy
+              I make tricky
               <br />
               problems simple.
             </h2>

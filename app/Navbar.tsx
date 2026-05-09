@@ -8,12 +8,12 @@ import { useTheme } from './ThemeProvider';
 
 /* Each link has a brand-colour pill that appears on hover */
 const links = [
-  { href: '/',          label: 'Home',       pill: '#94C5FF' },
-  { href: '#work',      label: 'Work',       pill: '#FF94C5' },
-  { href: '#projects',  label: 'Projects',   pill: '#C5FF94' },
-  { href: '/#timeline', label: 'Experience', pill: '#FF94C5' },
-  { href: '#about',     label: 'About',      pill: '#94C5FF' },
-  { href: '#footer',    label: 'Contact',    pill: '#C5FF94' },
+  { href: '/',           label: 'Home',       pill: '#94C5FF' },
+  { href: '/#work',      label: 'Work',       pill: '#FF94C5' },
+  { href: '/#projects',  label: 'Projects',   pill: '#C5FF94' },
+  { href: '/#about',     label: 'About',      pill: '#94C5FF' },
+  { href: '/#timeline',  label: 'Experience', pill: '#FF94C5' },
+  { href: '/#footer',    label: 'Contact',    pill: '#C5FF94' },
 ];
 
 const Navbar = () => {

@@ -30,7 +30,7 @@ const MapleResults = () => {
       </div>
       <div>
         <p>
-          This is great <strong>evidence</strong> that the combination of an
+          This is strong evidence that the combination of an
           improved journaling experience, UI and gamification really helped move
           the needle on user engagement. <br />
           Note: There is a slight dip in Day 0 retention for V1 versus the MVP.
@@ -46,7 +46,7 @@ const MapleResults = () => {
         <br />
         <p>
           Our results of our basic user sentiment analysis also showed that
-          <strong>
+          <strong className='hl-blue'>
             95% of journal sessions resulted in the user feeling either the same
             or better
           </strong>

@@ -11,7 +11,7 @@ const MapleChallengeGoal = () => {
           Journaling is widely accepted as a best practice tool to support
           mental health, however from our own experiences we've seen that many
           people simply don't do it. So we went on a mission to create a more
-          fun and engaging experience, particularly for Gen-Z, the generation
+          <span className='hl-pink'>fun and engaging experience</span>, particularly for Gen-Z, the generation
           most in need of mental health support (with 1 in 5 impacted worldwide
           annually).
           <br />
@@ -41,7 +41,7 @@ const MapleChallengeGoal = () => {
           <br />
           <br />
           We also had no coding experience, so we decided to launch our app
-          using a low-code platform. There was a steep learning curve and
+          using a <span className='hl-lime'>low-code platform</span>. There was a steep learning curve and
           limitations to what we could achieve that had to be factored into the
           product and design decisions.
           <br />

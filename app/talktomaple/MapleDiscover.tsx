@@ -87,8 +87,8 @@ const MapleDiscover = () => {
           entertainment based mental health support apps (e.g. chatbots), mood
           trackers and digital self care companion apps.
           <br />
-          This helped me identify
-          <strong>common design patterns</strong> we can utilise and take
+          This helped me identify{' '}
+          <strong className='hl-blue'>common design patterns</strong> we can utilise and take
           inspiration from, as these will already be familiar to our users and
           will reduce friction and cognitive load. These included:
         </p>
@@ -109,8 +109,8 @@ const MapleDiscover = () => {
         </ul>
         <br />
         <p>
-          The analysis also helped me identify some promising
-          <strong>opportunities</strong>
+          The analysis also helped me identify some promising{' '}
+          <strong>opportunities</strong>{' '}
           for us to improve on the experience for users as well:
         </p>
         <br />

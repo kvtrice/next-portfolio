@@ -139,7 +139,7 @@ const CodingProjects = () => {
     <section
       id='projects'
       className='py-24'
-      style={{ backgroundColor: 'var(--bg-alt, var(--bg))', borderTop: '1px solid var(--divider)' }}
+      style={{ backgroundColor: 'var(--bg-alt)', borderTop: '1px solid var(--divider)' }}
     >
       <div className='max-w-6xl mx-auto px-6'>
         <h2 className='text-4xl sm:text-5xl lg:text-6xl mb-4 leading-tight' style={{ color: 'var(--text)' }}>

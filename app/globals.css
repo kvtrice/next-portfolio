@@ -49,12 +49,15 @@
   --accent:   #94C5FF;
   --accent-2: #FF94C5;
   --accent-3: #C5FF94;
+
+  /* Case study card image background — subtle dark, not clashing purple */
+  --case-img-bg: #14142E;
 }
 
 /* ─── Theme: Colour ─────────────────────────────────────────────── */
 [data-theme="colour"] {
   --bg:     #FEFEFE;
-  --bg-alt: #FFF5FA;
+  --bg-alt: #F4EEFF;   /* soft lavender — visible gradient sections on light theme */
   --card-bg: #ffffff;
 
   --text:       #111111;
@@ -92,6 +95,9 @@
   --accent:   #4A7FCC;
   --accent-2: #C2347A;
   --accent-3: #4D8C1C;
+
+  /* Case study card image background — slightly softer lavender for card context */
+  --case-img-bg: #EEE0FF;
 }
 
 /* ─── Base styles ───────────────────────────────────────────────── */
@@ -161,7 +167,7 @@
   .sub-heading { font-size: 14px; text-transform: uppercase; letter-spacing: 4px; padding-bottom: 1.5rem; }
   .case-study-ul li { padding-left: 1.5rem; list-style-type: disc; list-style-position: inside; }
   .case-study-ol li { padding-left: 1.5rem; list-style-type: decimal; list-style-position: inside; }
-  .case-image { background-color: white; border-radius: 10px; padding: 5px; }
+  .case-image { background-color: white; border-radius: 10px; padding: 5px; transition: background-color 0.3s ease; }
 }
 
 /* ─── Utilities ─────────────────────────────────────────────────── */
@@ -169,6 +175,23 @@
   .text-balance { text-wrap: balance; }
   .animation-delay-3000 { animation-delay: 3s; }
   .animation-delay-6000 { animation-delay: 6s; }
+}
+
+/* ─── Case study dark-mode ───────────────────────────────────────── */
+/* Keep white bg (screenshots designed for it), add subtle ring */
+[data-theme="dark"] .case-image {
+  background-color: white;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12), 0 4px 20px rgba(0,0,0,0.30);
+}
+
+/* Figcaptions sit on the white case-image bg — must be dark to be readable */
+[data-theme="dark"] .case-image figcaption {
+  color: #4B5563;
+}
+
+/* Figcaptions outside case-image boxes stay light */
+[data-theme="dark"] figcaption {
+  color: rgba(203, 213, 225, 0.85);
 }
 
 /* ─── Highlighter marks ──────────────────────────────────────────── */

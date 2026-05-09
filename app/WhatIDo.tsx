@@ -39,7 +39,7 @@ const WhatIDo = () => {
     <section
       className='py-24'
       style={{
-        backgroundColor: 'var(--bg-alt, var(--bg))',
+        backgroundColor: 'var(--bg-alt)',
         borderTop: '1px solid var(--divider)',
       }}
     >

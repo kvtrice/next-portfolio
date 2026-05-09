@@ -62,9 +62,14 @@ const CaseStudyCard = ({
   tags,
   href,
   year,
-  imageBg = '#1C1040',
+  imageBg,
   stats,
 }: CaseStudyCardProps) => {
+  /* Theme-aware background:
+     dark  = deep Maple purple
+     light = soft Maple lavender */
+  const bg = imageBg ?? 'var(--case-img-bg)';
+
   return (
     <Link href={href} className='group block'>
       <article className='themed-card rounded-xl overflow-hidden h-full flex flex-col'>
@@ -73,7 +78,7 @@ const CaseStudyCard = ({
         {/* Swap talktomaple.jpg → talktomaple.png once saved to /public/assets/project-tiles/ */}
         <div
           className='relative w-full flex items-center justify-center overflow-hidden'
-          style={{ aspectRatio: '16/9', backgroundColor: imageBg }}
+          style={{ aspectRatio: '16/9', backgroundColor: bg }}
         >
           <Image
             src={image}
