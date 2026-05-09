@@ -9,7 +9,9 @@ type LabProject = {
   description: string;
   image: string;
   tags: string[];
+  year?: string;
   liveSiteUrl?: string;
+  liveLabel?: string;
   githubUrl?: string;
 };
 
@@ -19,21 +21,24 @@ const projects: LabProject[] = [
     description: 'Full-stack forum for plant lovers. MongoDB, Express, React, Node.',
     image: '/assets/project-tiles/Sproutly.gif',
     tags: ['React', 'Node', 'MongoDB'],
-    liveSiteUrl: 'https://sproutlyapp.vercel.app/',
+    year: '2024',
+    liveSiteUrl: 'https://canva.link/1ykudef2iqqexoc',
+    liveLabel: 'View Slides',
     githubUrl: 'https://github.com/kvtrice/sproutly-frontend',
   },
   {
-    title: 'Google Books Search',
-    description: 'Search and browse books via the Google Books API.',
-    image: '/assets/project-tiles/google-books.jpg',
-    tags: ['React', 'Sass', 'API'],
-    liveSiteUrl: 'https://google-book-search-theta.vercel.app/',
-    githubUrl: 'https://github.com/kvtrice/books-search-engine',
+    title: 'To-do App',
+    description: 'Fullstack kanban task manager. TypeScript frontend, Java Spring Boot backend.',
+    year: '2024',
+    image: '/assets/project-tiles/to-do.jpg',
+    tags: ['TypeScript', 'Java', 'React'],
+    githubUrl: 'https://github.com/kvtrice/todo-app',
   },
   {
     title: 'Morse Code Translator',
     description: 'Real-time English to Morse code translation in the browser.',
     image: '/assets/project-tiles/morse-code.jpg',
+    year: '2024',
     tags: ['JavaScript', 'Sass', 'Jest'],
     liveSiteUrl: 'https://morse-code-translator-ten.vercel.app/',
     githubUrl: 'https://github.com/kvtrice/morse-code-translator',
@@ -42,6 +47,7 @@ const projects: LabProject[] = [
     title: 'Windows 98 OS',
     description: 'A working simulation of the Windows 98 operating system.',
     image: '/assets/project-tiles/windows-98.jpg',
+    year: '2024',
     tags: ['HTML', 'CSS', 'JavaScript'],
     liveSiteUrl: 'https://windows-98-os.vercel.app/',
     githubUrl: 'https://github.com/kvtrice/windows-98-OS',
@@ -49,6 +55,7 @@ const projects: LabProject[] = [
 ];
 
 const ProjectCard = ({ project }: { project: LabProject }) => {
+  const liveLabel = project.liveLabel ?? 'Live ↗';
   const cardRef = useRef<HTMLElement>(null);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
@@ -72,10 +79,11 @@ const ProjectCard = ({ project }: { project: LabProject }) => {
     <article
       ref={cardRef}
       key={project.title}
-      className='themed-card rounded-xl overflow-hidden'
+      className='themed-card rounded-xl overflow-hidden flex flex-col'
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
+      {/* Image with optional year badge */}
       <div className='relative w-full overflow-hidden' style={{ aspectRatio: '4/3' }}>
         <Image
           src={project.image}
@@ -84,9 +92,18 @@ const ProjectCard = ({ project }: { project: LabProject }) => {
           className='object-cover'
           sizes='(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw'
         />
+        {project.year && (
+          <span
+            className='absolute top-2.5 left-2.5 text-[10px] font-heading font-semibold px-2 py-0.5 rounded-full'
+            style={{ backgroundColor: 'var(--accent)', color: '#1A1D24' }}
+          >
+            {project.year}
+          </span>
+        )}
       </div>
 
-      <div className='p-5'>
+      {/* Content — flex-col so buttons always sit at the bottom */}
+      <div className='p-5 flex flex-col flex-1'>
         <h3 className='text-base font-bold mb-1 py-0 leading-snug' style={{ color: 'var(--text)' }}>
           {project.title}
         </h3>
@@ -103,14 +120,14 @@ const ProjectCard = ({ project }: { project: LabProject }) => {
           ))}
         </p>
 
-        <div className='flex gap-2 flex-wrap'>
+        <div className='flex gap-2 flex-wrap mt-auto'>
           {project.liveSiteUrl && (
             <Link href={project.liveSiteUrl} target='_blank' rel='noopener noreferrer'>
               <span
                 className='inline-flex items-center px-4 py-1.5 rounded-lg font-heading font-semibold text-xs transition-opacity duration-200 hover:opacity-80'
                 style={{ backgroundColor: '#C5FF94', color: '#1A1D24', border: '1.5px solid #C5FF94' }}
               >
-                Live ↗
+                {liveLabel}
               </span>
             </Link>
           )}

@@ -87,6 +87,14 @@ const CaseStudyCard = ({
             className='object-contain group-hover:scale-[1.03] transition-transform duration-500 p-4'
             sizes='(max-width: 768px) 100vw, 50vw'
           />
+          {year && (
+            <span
+              className='absolute top-3 left-3 text-[10px] font-heading font-semibold px-2 py-0.5 rounded-full z-10'
+              style={{ backgroundColor: 'var(--accent)', color: '#1A1D24' }}
+            >
+              {year}
+            </span>
+          )}
         </div>
 
         {/* Content */}

@@ -24,9 +24,44 @@ const paprika = Paprika({
 });
 
 export const metadata: Metadata = {
-  title: 'Katrice Mountford',
+  title: {
+    default: 'Katrice Mountford | Product Manager',
+    template: '%s | Katrice Mountford',
+  },
   description:
-    'Product Manager with a background in software engineering, AI and product design. Specialising in translating complex problems into simple solutions.',
+    'Product Manager with 8+ years across software engineering, AI and product design. Specialising in 0→1 builds, health tech, and translating complex problems into simple solutions. Based in Melbourne.',
+  keywords: [
+    'Product Manager',
+    'Product Management',
+    'UX Design',
+    'Software Engineering',
+    'AI',
+    'Health Tech',
+    'Melbourne',
+    'Katrice Mountford',
+    'GenAI',
+    '0 to 1',
+  ],
+  authors: [{ name: 'Katrice Mountford', url: 'https://katmountford.com' }],
+  openGraph: {
+    title: 'Katrice Mountford | Product Manager',
+    description:
+      'Product Manager with 8+ years across software engineering, AI and product design. Based in Melbourne.',
+    url: 'https://katmountford.com',
+    siteName: 'Katrice Mountford',
+    type: 'website',
+    locale: 'en_AU',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Katrice Mountford | Product Manager',
+    description:
+      'Product Manager with 8+ years across software engineering, AI and product design. Based in Melbourne.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
