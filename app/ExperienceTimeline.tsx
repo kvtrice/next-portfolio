@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 type Role = {
   number: string;
@@ -17,68 +17,69 @@ const roles: Role[] = [
   {
     number: '01',
     company: 'Aurecon',
-    role: 'Product Engineer',
-    period: 'Oct 2024 – Present',
+    role: 'AI Product Consultant',
+    period: '2024 – Present',
     tag: 'AI · Enterprise',
     descriptor: 'AI-powered internal tooling for a global engineering consultancy.',
     highlights: [
-      'Launched Cue, improving prompt accuracy ~40% and driving adoption across the business.',
-      'Owned product direction for ClaRFI — AI tool for faster RFI generation and response.',
+      'Launched Cue, improving prompt accuracy ~20% and driving adoption across the business.',
+      'Partnered with Product Owner on ClaRFI — an AI-powered RFI tool — leading frontend dev and owning customer onboarding.',
       'Co-hosted Humans in the Loop monthly webinar series drawing hundreds of attendees.',
     ],
-    accent: '#94C5FF',
+    accent: 'var(--accent)',
   },
   {
     number: '02',
     company: 'Talk to Maple',
     role: 'Co-Founder',
-    period: 'Jan – Jun 2023',
+    period: '2023',
     tag: 'Startup · 0→1',
     descriptor: 'Gamified AI journaling app built during Antler Australia pre-seed accelerator.',
     highlights: [
       '200+ downloads, 95% positive sentiment, measurable Day 1 and 2 retention uplift.',
       'Built and shipped MVP in 8 weeks — product, UX/UI and front-end dev all in-house.',
     ],
-    accent: '#FF94C5',
+    accent: 'var(--accent-2)',
   },
   {
     number: '03',
     company: 'Culture Amp',
     role: 'Product Manager',
-    period: 'Jul 2022 – Jan 2023',
+    period: '2022 – 2023',
     tag: 'Series E · Enterprise',
     descriptor: 'Retention roadmap for the Perform product at an enterprise HR SaaS company.',
     highlights: [
       'Delivered initiatives projected to reduce churn by ~5%.',
       'Business case presented to and approved by senior leadership.',
     ],
-    accent: '#C5FF94',
+    accent: 'var(--accent-3)',
   },
   {
     number: '04',
     company: 'Surreal',
     role: 'Product Manager',
-    period: 'Jul 2021 – Jul 2022',
+    period: '2021 – 2022',
     tag: 'Series A · First PM',
     descriptor: '0→1 product build and UK market launch at an event management SaaS startup.',
     highlights: [
       'Secured $750K in VC funding with an international product strategy pitch.',
       'Travelled to the UK to onboard early customers and build the expansion roadmap.',
     ],
-    accent: '#94C5FF',
+    accent: 'var(--accent)',
   },
   {
     number: '05',
     company: 'Henry Schein One',
     role: 'Product Manager',
-    period: 'Jun 2019 – Jul 2021',
-    tag: 'Enterprise · Promoted',
-    descriptor: 'Promoted from Senior Technical Support into Product at a global dental software provider.',
+    period: '2019 – 2021',
+    tag: 'Enterprise · Health Tech',
+    descriptor: 'Retention-focused roadmap at a global dental software provider, shaped by continuous customer interviews and data analysis.',
     highlights: [
       'NPS up +26 points and user growth doubled in 12 months.',
-      'Reduced support calls by 40% via a comprehensive help centre.',
+      'Reduced support calls by 40% via a comprehensive help centre and Zendesk chat support.',
+      'Launched Dentally (UK acquisition) in the Australian market, defining localisation priorities and onboarding initial customers.',
     ],
-    accent: '#FF94C5',
+    accent: 'var(--accent-2)',
   },
 ];
 
@@ -105,11 +106,7 @@ function RoleCard({ role, isEven }: { role: Role; isEven: boolean }) {
         className='themed-card rounded-xl p-7 w-full md:w-[62%]'
         style={{
           opacity: visible ? 1 : 0,
-          transform: visible
-            ? 'translateX(0) translateY(0)'
-            : isEven
-            ? 'translateX(48px) translateY(8px)'
-            : 'translateX(-48px) translateY(8px)',
+          transform: visible ? 'translateY(0)' : 'translateY(20px)',
           transition: 'opacity 0.55s ease, transform 0.55s ease',
           ...(visible && {
             ['--hover-border' as string]: role.accent,
@@ -124,18 +121,11 @@ function RoleCard({ role, isEven }: { role: Role; isEven: boolean }) {
           (e.currentTarget as HTMLElement).style.boxShadow = '';
         }}
       >
-        {/* Header */}
-        <div className='flex items-start justify-between gap-4 mb-3'>
-          <div className='flex items-baseline gap-3'>
-            <span className='font-heading font-bold text-3xl leading-none' style={{ color: role.accent }}>
-              {role.number}
-            </span>
-            <p className='font-heading font-bold text-base leading-snug'>
-              <span style={{ color: 'var(--text)' }}>{role.role}</span>
-              <span style={{ color: 'var(--text-muted)', fontWeight: 400 }}> at </span>
-              <span style={{ color: role.accent }}>{role.company}</span>
-            </p>
-          </div>
+        {/* Header row 1: number + period */}
+        <div className='flex items-start justify-between gap-2 mb-2'>
+          <span className='font-heading font-bold text-3xl leading-none flex-shrink-0' style={{ color: role.accent }}>
+            {role.number}
+          </span>
           <div className='text-right flex-shrink-0'>
             <p className='text-xs font-body' style={{ color: role.accent }}>{role.period}</p>
             {role.tag && (
@@ -146,8 +136,15 @@ function RoleCard({ role, isEven }: { role: Role; isEven: boolean }) {
           </div>
         </div>
 
+        {/* Header row 2: role + company */}
+        <p className='font-heading font-bold text-base leading-snug mb-3'>
+          <span style={{ color: 'var(--text)' }}>{role.role}</span>
+          <span style={{ color: 'var(--text-muted)', fontWeight: 400 }}> at </span>
+          <span style={{ color: role.accent }}>{role.company}</span>
+        </p>
+
         {/* Short descriptor */}
-        <p className='text-sm leading-6 font-body mb-3 pl-10' style={{ color: 'var(--text-muted)' }}>
+        <p className='text-sm sm:text-sm leading-6 font-body mb-3' style={{ color: 'var(--text-muted)' }}>
           {role.descriptor}
         </p>
 
@@ -156,7 +153,7 @@ function RoleCard({ role, isEven }: { role: Role; isEven: boolean }) {
           <>
             <button
               onClick={() => setExpanded(!expanded)}
-              className='flex items-center gap-1.5 text-xs font-heading font-semibold uppercase tracking-widest ml-10 transition-opacity hover:opacity-70'
+              className='flex items-center gap-1.5 text-xs font-heading font-semibold uppercase tracking-widest transition-opacity hover:opacity-70'
               style={{ color: role.accent, background: 'none', border: 'none', boxShadow: 'none', padding: 0 }}
             >
               <span
@@ -170,9 +167,9 @@ function RoleCard({ role, isEven }: { role: Role; isEven: boolean }) {
 
             <div
               className='overflow-hidden transition-all duration-300'
-              style={{ maxHeight: expanded ? '400px' : '0', opacity: expanded ? 1 : 0 }}
+              style={{ maxHeight: expanded ? '500px' : '0', opacity: expanded ? 1 : 0 }}
             >
-              <ul className='mt-3 space-y-2 ml-10'>
+              <ul className='mt-3 space-y-2'>
                 {role.highlights.map((h, i) => (
                   <li key={i} className='flex items-start gap-2 text-sm leading-6 font-body'>
                     <span className='mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0' style={{ backgroundColor: role.accent }} />

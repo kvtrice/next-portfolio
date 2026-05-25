@@ -63,40 +63,30 @@ const About = () => {
               style={{ color: 'var(--text-muted)' }}
             >
               <p>
-                Hey I&apos;m Kat 👋 A Product Manager who likes making things{' '}
-                <span className='hl-pink'>clearer, simpler, and easier</span> for people to use. Most of my work
-                sits at the intersection of product, design, and engineering. I
-                enjoy diving into messy or unclear problems, understanding what
-                people are actually trying to do and then shaping a solution that
-                genuinely helps.
+                Hey I&apos;m Kat 👋 A Product Manager with a background across{' '}
+                <span className='hl-pink'>software engineering, AI and UX design</span>, and 
+                I love working at the intersection of all three.
               </p>
               <p>
-                My background includes product management, UX thinking, and{' '}
-                <span className='hl-lime'>enough hands-on engineering</span> to
-                collaborate closely with developers and understand what&apos;s
-                feasible. I&apos;m not precious about where
-                ideas come from. I care more about whether the end result
-                helps someone and solves the real problem.
+                My product career has been varied; from launching{' '}
+                <span className='hl-lime'>0 → 1 products</span> at early stage startups
+                to building at scale in enterprise SaaS. A few years ago I made a
+                deliberate move into software engineering. I wanted to get closer
+                to the code, understand the challenges engineers face, and become
+                a better partner to the teams I work with.
               </p>
               <p>
-                I&apos;m motivated by{' '}
-                <span className='hl-pink'>meaningful, human-impact work</span>. I like
-                building products that make someone&apos;s job easier, save time,
-                reduce confusion or help a team work better together. I&apos;m
-                also a continuous learner. Over the years I&apos;ve built skills
-                across software engineering, AI tooling, psychology and
-                neuroscience, mostly because I&apos;m curious and want to
-                understand how things (and people) work. That curiosity helps me
-                ask better questions and make more grounded product decisions.
+                I&apos;m not precious about where ideas come from. I care most
+                about whether the end result solves the real problem and whether
+                it makes someone&apos;s day a little easier. The work I&apos;m most
+                drawn to is where I can{' '}
+                <span className='hl-pink'>help make a real impact</span> on the lives of others: spaces such as health, wellbeing,
+                how people spend their working lives.
               </p>
               <p>
-                At the core, I like{' '}
-                <span className='hl-blue'>creating clarity</span>. Whether it&apos;s a
-                feature, a workflow, a roadmap or a conversation. I want
-                the end result to feel organised, purposeful and easy to navigate.
-                And when I&apos;m not focussed on that, outside of work you&apos;ll
-                usually find me reading, walking my dog, playing board games with
-                my family, or finding some outdoor walks to explore 🥾
+                Outside of work you&apos;ll usually find me reading, walking my dog,
+                playing board games with my family, or out{' '}
+                <span className='hl-blue'>exploring somewhere new</span> 🥾
               </p>
             </div>
 

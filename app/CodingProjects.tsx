@@ -95,7 +95,7 @@ const ProjectCard = ({ project }: { project: LabProject }) => {
         {project.year && (
           <span
             className='absolute top-2.5 left-2.5 text-[10px] font-heading font-semibold px-2 py-0.5 rounded-full'
-            style={{ backgroundColor: 'var(--accent)', color: '#1A1D24' }}
+            style={{ backgroundColor: 'var(--pill-bg)', color: 'var(--pill-text)', backdropFilter: 'blur(4px)' }}
           >
             {project.year}
           </span>
@@ -125,7 +125,7 @@ const ProjectCard = ({ project }: { project: LabProject }) => {
             <Link href={project.liveSiteUrl} target='_blank' rel='noopener noreferrer'>
               <span
                 className='inline-flex items-center px-4 py-1.5 rounded-lg font-heading font-semibold text-xs transition-opacity duration-200 hover:opacity-80'
-                style={{ backgroundColor: '#C5FF94', color: '#1A1D24', border: '1.5px solid #C5FF94' }}
+                style={{ backgroundColor: 'var(--live-btn-bg)', color: 'var(--live-btn-text)', border: '1.5px solid var(--live-btn-border)' }}
               >
                 {liveLabel}
               </span>

@@ -8,7 +8,7 @@ const CaseStudies = () => {
           Product case studies
         </h2>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+        <div className='max-w-2xl'>
           <CaseStudyCard
             title='Talk to Maple'
             description='A gamified AI journaling app built during Antler Australia startup accelerator. From zero research to launch in 8 weeks.'
@@ -22,16 +22,6 @@ const CaseStudies = () => {
               { value: 8,  suffix: '',  label: 'weeks to launch',     color: 'var(--accent-3)' },
             ]}
           />
-
-          <div className='themed-card rounded-xl p-8 flex flex-col items-center justify-center min-h-[400px] text-center'>
-            <span className='text-4xl mb-4' style={{ color: 'var(--text-muted)' }}>✦</span>
-            <p className='font-heading font-bold text-xl mb-2' style={{ color: 'var(--text-muted)' }}>
-              More coming soon
-            </p>
-            <p className='text-sm font-body max-w-xs' style={{ color: 'var(--text-muted)' }}>
-              Next case study in progress. Connect on LinkedIn to follow along.
-            </p>
-          </div>
         </div>
       </div>
     </section>

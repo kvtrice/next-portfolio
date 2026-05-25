@@ -1,16 +1,59 @@
 'use client';
 
-import React from 'react';
+import { useEffect, useState } from 'react';
 import { useTheme } from './ThemeProvider';
+
+const CYCLING_WORDS = ['health tech', '0→1 builds', 'AI products', 'complex problems'];
+const TYPE_SPEED = 60;
+const DELETE_SPEED = 35;
+const PAUSE_AFTER_TYPE = 1800;
+const PAUSE_AFTER_DELETE = 400;
+
+function useTypedCycler(words: string[]) {
+  const [displayed, setDisplayed] = useState('');
+  const [wordIndex, setWordIndex] = useState(0);
+  const [phase, setPhase] = useState<'typing' | 'pausing' | 'deleting' | 'waiting'>('typing');
+
+  useEffect(() => {
+    const current = words[wordIndex];
+
+    if (phase === 'typing') {
+      if (displayed.length < current.length) {
+        const t = setTimeout(() => setDisplayed(current.slice(0, displayed.length + 1)), TYPE_SPEED);
+        return () => clearTimeout(t);
+      } else {
+        const t = setTimeout(() => setPhase('deleting'), PAUSE_AFTER_TYPE);
+        return () => clearTimeout(t);
+      }
+    }
+
+    if (phase === 'deleting') {
+      if (displayed.length > 0) {
+        const t = setTimeout(() => setDisplayed(d => d.slice(0, -1)), DELETE_SPEED);
+        return () => clearTimeout(t);
+      } else {
+        const t = setTimeout(() => {
+          setWordIndex(i => (i + 1) % words.length);
+          setPhase('typing');
+        }, PAUSE_AFTER_DELETE);
+        return () => clearTimeout(t);
+      }
+    }
+  }, [displayed, phase, wordIndex, words]);
+
+  return displayed;
+}
 
 const Hero = () => {
   const { theme } = useTheme();
   const isDark = theme === 'dark';
+  const typed = useTypedCycler(CYCLING_WORDS);
 
   const headingColor  = isDark ? '#FAF7F2' : '#1A1D24';
   const subtitleColor = isDark ? 'rgba(250,247,242,0.55)' : 'rgba(26,29,36,0.60)';
-  const calloutColor  = isDark ? '#FF94C5' : '#1A1D24';   /* pink on dark */
-  const circleColor   = isDark ? '#94C5FF' : '#1A1D24';   /* blue circle on dark */
+  const calloutColor  = isDark ? '#FF94C5' : '#1A1D24';
+  const circleColor   = isDark ? '#94C5FF' : '#1A1D24';
+  const accentColor   = isDark ? '#94C5FF' : '#1A1D24';
 
   return (
     <section
@@ -24,14 +67,14 @@ const Hero = () => {
     >
       <div className='relative z-10 max-w-6xl mx-auto px-6 py-16 w-full'>
         <h1
-          className='text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] leading-[1.05] font-bold mb-8'
+          className='text-5xl sm:text-6xl md:text-7xl xl:text-[5.5rem] leading-[1.1] font-bold mb-8'
           style={{ color: headingColor }}
         >
           Hey, I&apos;m Kat, a Product
-          <br />
-          Manager who also
-          <br />
-          knows how to{' '}
+          <br className='hidden sm:block' />
+          {' '}Manager who also
+          <br className='hidden sm:block' />
+          {' '}knows how to{' '}
           <span className='relative inline-block'>
             <span className='font-display italic' style={{ color: calloutColor }}>
               build
@@ -72,7 +115,16 @@ const Hero = () => {
           style={{ color: subtitleColor }}
         >
           Background in software engineering, AI and product design.
-          Specialising in translating complex problems into simple solutions.
+          <br />
+          Specialising in{' '}
+          <span style={{ color: accentColor, fontWeight: 600 }}>
+            {typed}
+            <span
+              className='inline-block w-[2px] h-[1em] ml-[1px] align-middle animate-pulse'
+              style={{ backgroundColor: accentColor, verticalAlign: 'text-bottom' }}
+            />
+          </span>
+          .
         </p>
 
         <a href='#work' className='btn-primary'>

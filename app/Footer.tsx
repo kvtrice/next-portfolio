@@ -14,14 +14,14 @@ const Footer = () => {
         {/* Main CTA */}
         <div className='mb-20'>
           <h2
-            className='text-5xl sm:text-6xl lg:text-7xl leading-tight mb-10'
+            className='text-4xl sm:text-5xl lg:text-7xl leading-tight mb-10'
             style={{ color: 'var(--text)' }}
           >
             Let&apos;s work
             <br />
             <span className='font-display italic'>together</span>.
           </h2>
-          <a href='mailto:katricemountford@gmail.com' className='btn-primary text-base'>
+          <a href='mailto:katricemountford@gmail.com' className='btn-primary text-sm sm:text-base break-all'>
             katricemountford@gmail.com
           </a>
         </div>

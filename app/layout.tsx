@@ -3,6 +3,7 @@ import './globals.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import ThemeProvider from './ThemeProvider';
+import AskKat from './AskKat';
 import { Bricolage_Grotesque, Poppins, Paprika } from 'next/font/google';
 
 const bricolage = Bricolage_Grotesque({
@@ -78,6 +79,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Footer />
+          <AskKat />
         </ThemeProvider>
       </body>
     </html>

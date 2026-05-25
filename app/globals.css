@@ -52,6 +52,15 @@
 
   /* Case study card image background — subtle dark, not clashing purple */
   --case-img-bg: #14142E;
+
+  /* Live / primary action button on project cards */
+  --live-btn-bg:     #C5FF94;
+  --live-btn-text:   #1A1D24;
+  --live-btn-border: #C5FF94;
+
+  /* Year pill — dark overlay so it's always readable on any image */
+  --pill-bg:   rgba(0, 0, 0, 0.60);
+  --pill-text: #FAF7F2;
 }
 
 /* ─── Theme: Colour ─────────────────────────────────────────────── */
@@ -91,20 +100,30 @@
   --proj-btn-text:   #FAF7F2;
   --proj-btn-border: #1A1D24;
 
-  /* Brand accents */
-  --accent:   #4A7FCC;
-  --accent-2: #C2347A;
-  --accent-3: #4D8C1C;
+  /* Brand accents — vivid mid-tones, same hue family as dark mode neons */
+  --accent:   #3B7DE8;   /* cornflower blue — energetic, not navy */
+  --accent-2: #D42580;   /* warm pink — vivid, not maroon */
+  --accent-3: #62AD12;   /* fresh lime — not forest/olive */
 
   /* Case study card image background — slightly softer lavender for card context */
   --case-img-bg: #EEE0FF;
+
+  /* Live / primary action button on project cards — lime tint, feels fresh not muddy */
+  --live-btn-bg:     rgba(197, 255, 148, 0.32);
+  --live-btn-text:   #2E5C07;
+  --live-btn-border: #6BBF2A;
+
+  /* Year pill — dark overlay, same approach as dark theme */
+  --pill-bg:   rgba(0, 0, 0, 0.58);
+  --pill-text: #FAF7F2;
 }
 
 /* ─── Base styles ───────────────────────────────────────────────── */
 @layer base {
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
 
   body {
+    overflow-x: hidden;
     background-color: var(--bg);
     color: var(--text);
     transition: background-color 0.4s ease, color 0.4s ease;

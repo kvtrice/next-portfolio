@@ -7,7 +7,7 @@ const cards = [
     number: '01',
     title: 'Product Strategy',
     description:
-      'Roadmaps, prioritisation frameworks, and stakeholder alignment. Turning ambiguous problems into a clear direction the whole team can build toward.',
+      'Roadmaps, hard trade-offs, and getting everyone pulling in the same direction. I take vague, messy problems and shape them into something concrete enough to build from.',
     accent:     'var(--accent)',
     hoverColor: '#94C5FF',
     hlClass:    'hl-blue',
@@ -16,7 +16,7 @@ const cards = [
     number: '02',
     title: 'User Research',
     description:
-      'Discovery interviews, survey design, and synthesis. I find the signal in the noise and make sure product decisions are grounded in real human behaviour.',
+      'Interviews, surveys, and synthesis. I dig into what people are struggling with and make sure product decisions are grounded in real human behaviour.',
     accent:     'var(--accent-2)',
     hoverColor: '#FF94C5',
     hlClass:    'hl-pink',
@@ -25,7 +25,7 @@ const cards = [
     number: '03',
     title: 'Build & Ship',
     description:
-      'From low-code prototypes to hands-on engineering. Enough technical depth to write specs that developers trust, and to build things myself when needed.',
+      'From low-code prototypes to hands-on engineering. I write specs developers trust and build things myself when that is the faster path.',
     accent:     'var(--accent-3)',
     hoverColor: '#C5FF94',
     hlClass:    'hl-lime',

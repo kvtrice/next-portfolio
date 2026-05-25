@@ -90,7 +90,7 @@ const CaseStudyCard = ({
           {year && (
             <span
               className='absolute top-3 left-3 text-[10px] font-heading font-semibold px-2 py-0.5 rounded-full z-10'
-              style={{ backgroundColor: 'var(--accent)', color: '#1A1D24' }}
+              style={{ backgroundColor: 'var(--pill-bg)', color: 'var(--pill-text)', backdropFilter: 'blur(4px)' }}
             >
               {year}
             </span>
