@@ -1,12 +1,48 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type ChangeEvent, type ReactNode } from 'react';
 
 type Message = { role: 'user' | 'assistant'; content: string };
 
 const WELCOME = "Hey! I'm Kat's AI assistant. Ask me anything about her background, experience, or what she's looking for next.";
 const MAX_MESSAGES = 10;
+
+function parseBold(text: string): ReactNode[] {
+  const nodes: ReactNode[] = [];
+  let rest = text;
+  let k = 0;
+  while (rest.length > 0) {
+    const m = /\*\*(.+?)\*\*/.exec(rest);
+    if (!m) { nodes.push(rest); break; }
+    if (m.index > 0) nodes.push(rest.slice(0, m.index));
+    nodes.push(<strong key={k++}>{m[1]}</strong>);
+    rest = rest.slice(m.index + m[0].length);
+  }
+  return nodes;
+}
+
+function MarkdownText({ text }: { text: string }) {
+  const lines = text.split('\n');
+  return (
+    <div className='space-y-1'>
+      {lines.map((line, li) => {
+        if (!line.trim()) return <div key={li} className='h-1' />;
+        const isBullet = /^[-*]\s/.test(line);
+        const raw = isBullet ? line.replace(/^[-*]\s/, '') : line;
+        if (isBullet) {
+          return (
+            <div key={li} className='flex items-start gap-1'>
+              <span className='flex-shrink-0'>•</span>
+              <span>{parseBold(raw)}</span>
+            </div>
+          );
+        }
+        return <div key={li}>{parseBold(line)}</div>;
+      })}
+    </div>
+  );
+}
 
 export default function AskKat() {
   const [open, setOpen] = useState(false);
@@ -14,16 +50,41 @@ export default function AskKat() {
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
+  const lastMsgRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLTextAreaElement>(null);
+  // 'bottom' = scroll to end, 'last-top' = scroll to top of newest bot msg, null = no scroll
+  const pendingScroll = useRef<'bottom' | 'last-top' | null>(null);
 
+  // Focus + jump to bottom when panel opens
   useEffect(() => {
     if (open) {
-      setTimeout(() => inputRef.current?.focus(), 50);
+      setTimeout(() => {
+        inputRef.current?.focus();
+        bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
+      }, 50);
+    }
+  }, [open]);
+
+  // Controlled scroll — only fires when pendingScroll is set, never during streaming
+  useEffect(() => {
+    if (!open) return;
+    if (pendingScroll.current === 'bottom') {
       bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
+      pendingScroll.current = null;
+    } else if (pendingScroll.current === 'last-top') {
+      lastMsgRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      pendingScroll.current = null;
     }
   }, [open, messages]);
 
   const atLimit = messages.length >= MAX_MESSAGES;
+
+  function handleInputChange(e: ChangeEvent<HTMLTextAreaElement>) {
+    setInput(e.target.value);
+    const el = e.currentTarget;
+    el.style.height = 'auto';
+    el.style.height = `${Math.min(el.scrollHeight, 96)}px`;
+  }
 
   async function send() {
     const text = input.trim();
@@ -32,7 +93,9 @@ export default function AskKat() {
     const next: Message[] = [...messages, { role: 'user', content: text }];
     setMessages(next);
     setInput('');
+    if (inputRef.current) inputRef.current.style.height = 'auto';
     setLoading(true);
+    pendingScroll.current = 'bottom'; // show user message + loading indicator
 
     try {
       const res = await fetch('/api/chat', {
@@ -46,12 +109,14 @@ export default function AskKat() {
       const decoder = new TextDecoder();
       let reply = '';
 
+      pendingScroll.current = 'last-top'; // scroll to TOP of bot response, not bottom
       setMessages(m => [...m, { role: 'assistant', content: '' }]);
 
       while (true) {
         const { done, value } = await reader.read();
         if (done) break;
         reply += decoder.decode(value, { stream: true });
+        // pendingScroll is null here — streaming updates never auto-scroll
         setMessages(m => {
           const updated = [...m];
           updated[updated.length - 1] = { role: 'assistant', content: reply };
@@ -134,7 +199,6 @@ export default function AskKat() {
 
         {/* Messages */}
         <div className='flex-1 overflow-y-auto px-4 py-3 space-y-3' style={{ minHeight: 0 }}>
-          {/* Welcome */}
           <div className='flex gap-2 items-start'>
             <div
               className='text-xs leading-6 font-body px-3 py-2 rounded-xl rounded-tl-sm max-w-[85%]'
@@ -145,7 +209,11 @@ export default function AskKat() {
           </div>
 
           {messages.map((m, i) => (
-            <div key={i} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+            <div
+              key={i}
+              ref={i === messages.length - 1 && m.role === 'assistant' ? lastMsgRef : undefined}
+              className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}
+            >
               <div
                 className='text-xs leading-6 font-body px-3 py-2 rounded-xl max-w-[85%]'
                 style={
@@ -154,10 +222,14 @@ export default function AskKat() {
                     : { backgroundColor: 'var(--bg-alt)', color: 'var(--text-muted)', border: '1px solid var(--divider)', borderRadius: '12px 12px 12px 4px' }
                 }
               >
-                {m.content || (loading && i === messages.length - 1 ? '…' : '')}
+                {m.role === 'assistant'
+                  ? (m.content ? <MarkdownText text={m.content} /> : (loading ? '…' : ''))
+                  : m.content
+                }
               </div>
             </div>
           ))}
+
           {atLimit && (
             <p className='text-[11px] font-body text-center py-1' style={{ color: 'var(--text-muted)' }}>
               That&apos;s the session limit —{' '}
@@ -170,26 +242,31 @@ export default function AskKat() {
           <div ref={bottomRef} />
         </div>
 
-        {/* Input */}
+        {/* Input — textarea expands to multiline, items-end keeps send btn at bottom */}
         <div
-          className='flex items-center gap-2 px-3 py-3 flex-shrink-0'
+          className='flex items-end gap-2 px-3 py-3 flex-shrink-0'
           style={{ borderTop: '1px solid var(--divider)', backgroundColor: 'var(--bg-alt)' }}
         >
-          <input
+          <textarea
             ref={inputRef}
-            type='text'
+            rows={1}
             value={input}
-            onChange={e => setInput(e.target.value)}
-            onKeyDown={e => { if (e.key === 'Enter') send(); }}
+            onChange={handleInputChange}
+            onKeyDown={e => {
+              if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                send();
+              }
+            }}
             placeholder={atLimit ? 'Session limit reached' : 'Ask anything...'}
             disabled={loading || atLimit}
-            className='flex-1 text-xs font-body bg-transparent outline-none placeholder:opacity-40'
-            style={{ color: 'var(--text)' }}
+            className='flex-1 text-xs font-body bg-transparent outline-none placeholder:opacity-40 resize-none overflow-hidden'
+            style={{ color: 'var(--text)', maxHeight: '96px', lineHeight: '1.5rem' }}
           />
           <button
             onClick={send}
             disabled={loading || !input.trim() || atLimit}
-            className='flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-opacity disabled:opacity-30'
+            className='flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-opacity disabled:opacity-30 mb-px'
             style={{ backgroundColor: '#94C5FF', color: '#1A1D24', border: 'none' }}
             aria-label='Send'
           >
