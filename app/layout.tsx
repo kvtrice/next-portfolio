@@ -26,28 +26,31 @@ const paprika = Paprika({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Katrice Mountford | Product Manager',
+    default: 'Katrice Mountford | AI Product Engineer',
     template: '%s | Katrice Mountford',
   },
   description:
-    'Product Manager with 8+ years across software engineering, AI and product design. Specialising in 0→1 builds, health tech, and translating complex problems into simple solutions. Based in Melbourne.',
+    'AI Product Engineer based in Melbourne. 9+ years building across product, AI and design — from 0→1 startup work to enterprise SaaS to AI products at Aurecon. Drawn to health tech and tricky problems.',
   keywords: [
+    'AI Product Engineer',
+    'Product Engineer',
     'Product Manager',
     'Product Management',
-    'UX Design',
-    'Software Engineering',
     'AI',
+    'GenAI',
+    'Software Engineering',
+    'UX Design',
     'Health Tech',
+    '0 to 1',
+    'Builder',
     'Melbourne',
     'Katrice Mountford',
-    'GenAI',
-    '0 to 1',
   ],
   authors: [{ name: 'Katrice Mountford', url: 'https://katmountford.com' }],
   openGraph: {
-    title: 'Katrice Mountford | Product Manager',
+    title: 'Katrice Mountford | AI Product Engineer',
     description:
-      'Product Manager with 8+ years across software engineering, AI and product design. Based in Melbourne.',
+      'Building products across product, AI and design. 9+ years across PM, startup founding, and AI product work. Based in Melbourne.',
     url: 'https://katmountford.com',
     siteName: 'Katrice Mountford',
     type: 'website',
@@ -55,9 +58,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Katrice Mountford | Product Manager',
+    title: 'Katrice Mountford | AI Product Engineer',
     description:
-      'Product Manager with 8+ years across software engineering, AI and product design. Based in Melbourne.',
+      'Building products across product, AI and design. 9+ years across PM, startup founding, and AI product work. Based in Melbourne.',
   },
   robots: {
     index: true,

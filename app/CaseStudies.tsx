@@ -5,7 +5,7 @@ const CaseStudies = () => {
     <section id='work' className='py-24' style={{ backgroundColor: 'var(--bg)', borderTop: '1px solid var(--divider)' }}>
       <div className='max-w-6xl mx-auto px-6'>
         <h2 className='text-4xl sm:text-5xl lg:text-6xl leading-tight mb-16' style={{ color: 'var(--text)' }}>
-          Product case studies
+          Things I&apos;ve built
         </h2>
 
         <div className='max-w-2xl'>

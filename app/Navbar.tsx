@@ -139,7 +139,7 @@ const Navbar = () => {
         </nav>
 
         <p className='px-8 pb-10 text-sm font-body' style={{ color: 'var(--text-muted)' }}>
-          Katrice Mountford · Product Manager
+          Katrice Mountford · Product · AI · Design
         </p>
       </div>
     </header>

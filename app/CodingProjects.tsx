@@ -163,7 +163,7 @@ const CodingProjects = () => {
           Engineering projects
         </h2>
         <p className='text-base font-body mb-16 max-w-md' style={{ color: 'var(--text-muted)' }}>
-          I build things to learn. Spanning front-end, full-stack, and creative experiments.
+          I build to learn. Front-end, full-stack, and a few curiosity-driven detours.
         </p>
 
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5'>

@@ -2,7 +2,7 @@ import Timeline from './Timeline';
 
 export const metadata = {
   title: 'Experience — Katrice Mountford',
-  description: 'Product Manager with a background in software engineering, AI and product design.',
+  description: 'Building products end-to-end across product, engineering and AI. A walk through the roles, builds, and outcomes that got me here.',
 };
 
 export default function TimelinePage() {

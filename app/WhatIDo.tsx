@@ -5,27 +5,27 @@ import React, { useState } from 'react';
 const cards = [
   {
     number: '01',
-    title: 'Product Strategy',
+    title: 'Shape the product',
     description:
-      'Roadmaps, hard trade-offs, and getting everyone pulling in the same direction. I take vague, messy problems and shape them into something concrete enough to build from.',
+      'Discovery, framing, prioritisation, and the calls about what to build next.',
     accent:     'var(--accent)',
     hoverColor: '#94C5FF',
     hlClass:    'hl-blue',
   },
   {
     number: '02',
-    title: 'User Research',
+    title: 'AI native',
     description:
-      'Interviews, surveys, and synthesis. I dig into what people are struggling with and make sure product decisions are grounded in real human behaviour.',
+      'Prompt design, LLM integrations, and a fullstack engineering background underneath.',
     accent:     'var(--accent-2)',
     hoverColor: '#FF94C5',
     hlClass:    'hl-pink',
   },
   {
     number: '03',
-    title: 'Build & Ship',
+    title: 'Considered design',
     description:
-      'From low-code prototypes to hands-on engineering. I write specs developers trust and build things myself when that is the faster path.',
+      'Designing alongside the build, from flow to final detail.',
     accent:     'var(--accent-3)',
     hoverColor: '#C5FF94',
     hlClass:    'hl-lime',
@@ -48,7 +48,7 @@ const WhatIDo = () => {
           className='text-4xl sm:text-5xl lg:text-6xl mb-16 leading-tight'
           style={{ color: 'var(--text)' }}
         >
-          I sit at the intersection
+          I work at the intersection
           <br />
           of{' '}
           <span className={`hl-blue${hovered === 0 ? ' hl-active' : ''}`}>
@@ -56,11 +56,11 @@ const WhatIDo = () => {
           </span>
           ,{' '}
           <span className={`hl-pink${hovered === 1 ? ' hl-active' : ''}`}>
-            design
+            AI
           </span>{' '}
           &amp;{' '}
           <span className={`hl-lime${hovered === 2 ? ' hl-active' : ''}`}>
-            code
+            design
           </span>
           .
         </h2>

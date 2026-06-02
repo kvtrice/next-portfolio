@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useTheme } from './ThemeProvider';
 
-const CYCLING_WORDS = ['health tech', '0→1 builds', 'AI products', 'complex problems'];
+const CYCLING_WORDS = ['health tech', '0 → 1 builds', 'AI products', 'tricky problems'];
 const TYPE_SPEED = 60;
 const DELETE_SPEED = 35;
 const PAUSE_AFTER_TYPE = 1800;
@@ -70,11 +70,10 @@ const Hero = () => {
           className='text-5xl sm:text-6xl md:text-7xl xl:text-[5.5rem] leading-[1.1] font-bold mb-8'
           style={{ color: headingColor }}
         >
-          Hey, I&apos;m Kat, a Product
+          Hey I&apos;m Kat,
           <br className='hidden sm:block' />
-          {' '}Manager who also
-          <br className='hidden sm:block' />
-          {' '}knows how to{' '}
+          I
+          {' '}
           <span className='relative inline-block'>
             <span className='font-display italic' style={{ color: calloutColor }}>
               build
@@ -107,16 +106,18 @@ const Hero = () => {
               />
             </svg>
           </span>{' '}
-          it.
+          products
+          <br className='hidden sm:block' />
+          {' '}end to end.
         </h1>
 
         <p
           className='text-lg max-w-xl leading-7 mb-10 font-body'
           style={{ color: subtitleColor }}
         >
-          Background in software engineering, AI and product design.
+          Product, AI and design in one set of hands.
           <br />
-          Specialising in{' '}
+          Drawn to{' '}
           <span style={{ color: accentColor, fontWeight: 600 }}>
             {typed}
             <span
