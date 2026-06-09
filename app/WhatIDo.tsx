@@ -7,25 +7,25 @@ const cards = [
     number: '01',
     title: 'Shape the product',
     description:
-      'Discovery, framing, prioritisation, and the calls about what to build next.',
+      'From discovery through to delivery, prioritisation and strategy; I have years of experience leading product direction.',
     accent:     'var(--accent)',
     hoverColor: '#94C5FF',
     hlClass:    'hl-blue',
   },
   {
     number: '02',
-    title: 'AI native',
+    title: 'End-to-end delivery',
     description:
-      'Prompt design, LLM integrations, and a fullstack engineering background underneath.',
+      "I have experience across software engineering, AI and design meaning I'm able to move fast and wear many hats.",
     accent:     'var(--accent-2)',
     hoverColor: '#FF94C5',
     hlClass:    'hl-pink',
   },
   {
     number: '03',
-    title: 'Considered design',
+    title: 'Close to the problem',
     description:
-      'Designing alongside the build, from flow to final detail.',
+      "I'm drawn to work that makes a difference and where I can see the impact I'm making.",
     accent:     'var(--accent-3)',
     hoverColor: '#C5FF94',
     hlClass:    'hl-lime',
@@ -56,11 +56,11 @@ const WhatIDo = () => {
           </span>
           ,{' '}
           <span className={`hl-pink${hovered === 1 ? ' hl-active' : ''}`}>
-            AI
+            technology
           </span>{' '}
           &amp;{' '}
           <span className={`hl-lime${hovered === 2 ? ' hl-active' : ''}`}>
-            design
+            impact
           </span>
           .
         </h2>

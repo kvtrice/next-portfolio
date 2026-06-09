@@ -20,10 +20,10 @@ const roles: Role[] = [
     role: 'AI Product Engineer',
     period: '2024 – Present',
     tag: 'AI · Enterprise',
-    descriptor: 'Building AI products end-to-end inside the Generative AI team at a global engineering consultancy.',
+    descriptor: 'Building AI tools inside the Generative AI team at a global engineering consultancy, from problem framing through to delivery.',
     highlights: [
-      'Led product direction for Cue, an internal AI knowledge and prompt engineering platform — driving ~20% improvement in prompt accuracy and shaping the roadmap from problem framing through to delivery.',
-      'Contributed across the full product lifecycle on an automated RFI generation platform — problem framing, requirements, and hands-on delivery across both technical and business workstreams.',
+      'Led product direction for Cue, an internal AI knowledge and prompt engineering platform, driving ~20% improvement in prompt accuracy and shaping the roadmap from problem framing through to delivery.',
+      'Contributed across the full product lifecycle on an automated RFI generation platform: problem framing, requirements, and hands-on delivery across both technical and business workstreams.',
       'Co-hosted Humans in the Loop, a monthly internal webinar series helping non-technical staff build confidence working with AI.',
     ],
     accent: 'var(--accent)',
@@ -37,7 +37,7 @@ const roles: Role[] = [
     descriptor: 'Gamified AI journaling app built during Antler Australia pre-seed accelerator.',
     highlights: [
       '200+ downloads, 95% positive sentiment, measurable Day 1 and 2 retention uplift.',
-      'Built and shipped MVP in 8 weeks — product, UX/UI and front-end dev all in-house.',
+      'Built and shipped MVP in 8 weeks, with product, UX/UI and front-end dev all in-house.',
     ],
     accent: 'var(--accent-2)',
   },

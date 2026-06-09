@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useTheme } from './ThemeProvider';
 
-const CYCLING_WORDS = ['health tech', '0 → 1 builds', 'AI products', 'tricky problems'];
+const CYCLING_WORDS = ['being close to the customer', 'making an impact', '0 → 1 builds', 'complex problems'];
 const TYPE_SPEED = 60;
 const DELETE_SPEED = 35;
 const PAUSE_AFTER_TYPE = 1800;
@@ -70,13 +70,14 @@ const Hero = () => {
           className='text-5xl sm:text-6xl md:text-7xl xl:text-[5.5rem] leading-[1.1] font-bold mb-8'
           style={{ color: headingColor }}
         >
-          Hey I&apos;m Kat,
+          I&apos;m Kat,
           <br className='hidden sm:block' />
-          I
-          {' '}
+          a product manager
+          <br className='hidden sm:block' />
+          that also{' '}
           <span className='relative inline-block'>
-            <span className='font-display italic' style={{ color: calloutColor }}>
-              build
+            <span className='font-display italic text-[0.85em]' style={{ color: calloutColor }}>
+              builds
             </span>
             <svg
               aria-hidden='true'
@@ -106,18 +107,14 @@ const Hero = () => {
               />
             </svg>
           </span>{' '}
-          products
-          <br className='hidden sm:block' />
-          {' '}end to end.
+          it.
         </h1>
 
         <p
           className='text-lg max-w-xl leading-7 mb-10 font-body'
           style={{ color: subtitleColor }}
         >
-          Product, AI and design in one set of hands.
-          <br />
-          Drawn to{' '}
+          I have experience across Software Engineering, AI and Product Design and I'm passionate about{' '}
           <span style={{ color: accentColor, fontWeight: 600 }}>
             {typed}
             <span
@@ -125,7 +122,6 @@ const Hero = () => {
               style={{ backgroundColor: accentColor, verticalAlign: 'text-bottom' }}
             />
           </span>
-          .
         </p>
 
         <a href='#work' className='btn-primary'>

@@ -63,19 +63,17 @@ const About = () => {
               style={{ color: 'var(--text-muted)' }}
             >
               <p>
-                Hey I&apos;m Kat 👋 I build products across{' '}
-                <span className='hl-pink'>product, AI and design</span>.
-                Started in product management, trained as a fullstack engineer
-                and UX/UI designer along the way, and now work in the Generative
-                AI team at Aurecon.
+                Hey I&apos;m Kat 👋 I&apos;ve spent years leading products across{' '}
+                <span className='hl-pink'>health tech, enterprise SaaS, and early-stage startups</span>.
+                Along the way I picked up engineering, AI, and design skills.
+                Not to switch lanes, but so I could move fast and wear many hats.
               </p>
               <p>
-                My career&apos;s been varied — launching{' '}
+                My career&apos;s been varied, launching{' '}
                 <span className='hl-lime'>0 → 1 products</span> at early-stage startups,
                 building at scale in enterprise SaaS, co-founding through Antler&apos;s
                 accelerator, and now driving AI product work at Aurecon. The thread
-                running through all of it is the same: get close to the problem,
-                build the thing, learn from real users.
+                through all of it: get close to the problem, make the call, and ship it.
               </p>
               <p>
                 I&apos;m not precious about where ideas come from. I care most
@@ -83,7 +81,7 @@ const About = () => {
                 it makes someone&apos;s day a little easier. The work I&apos;m 
                 drawn to is where I can{' '}
                 <span className='hl-pink'>help make a real impact</span> on the
-                lives of others — health, wellbeing, the way people spend their
+                lives of others: health, wellbeing, the way people spend their
                 working lives.
               </p>
               <p>

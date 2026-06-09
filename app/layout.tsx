@@ -26,31 +26,29 @@ const paprika = Paprika({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Katrice Mountford | AI Product Engineer',
+    default: 'Katrice Mountford | Product Manager',
     template: '%s | Katrice Mountford',
   },
   description:
-    'AI Product Engineer based in Melbourne. 9+ years building across product, AI and design — from 0→1 startup work to enterprise SaaS to AI products at Aurecon. Drawn to health tech and tricky problems.',
+    'Product Manager based in Melbourne, with experience across health tech, enterprise SaaS, and early-stage startups. Technical depth in AI, engineering and design. Passionate about work that makes a real difference.',
   keywords: [
-    'AI Product Engineer',
-    'Product Engineer',
     'Product Manager',
     'Product Management',
-    'AI',
+    'Health Tech',
+    'AI Products',
     'GenAI',
+    'Startup',
+    '0 to 1',
     'Software Engineering',
     'UX Design',
-    'Health Tech',
-    '0 to 1',
-    'Builder',
     'Melbourne',
     'Katrice Mountford',
   ],
   authors: [{ name: 'Katrice Mountford', url: 'https://katmountford.com' }],
   openGraph: {
-    title: 'Katrice Mountford | AI Product Engineer',
+    title: 'Katrice Mountford | Product Manager',
     description:
-      'Building products across product, AI and design. 9+ years across PM, startup founding, and AI product work. Based in Melbourne.',
+      'Product manager with a startup mindset and technical depth across AI, engineering and design. Experience in health tech, enterprise SaaS, and 0→1 builds. Based in Melbourne.',
     url: 'https://katmountford.com',
     siteName: 'Katrice Mountford',
     type: 'website',
@@ -58,9 +56,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Katrice Mountford | AI Product Engineer',
+    title: 'Katrice Mountford | Product Manager',
     description:
-      'Building products across product, AI and design. 9+ years across PM, startup founding, and AI product work. Based in Melbourne.',
+      'Product manager with a startup mindset and technical depth across AI, engineering and design. Experience in health tech, enterprise SaaS, and 0→1 builds. Based in Melbourne.',
   },
   robots: {
     index: true,

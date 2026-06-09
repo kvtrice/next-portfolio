@@ -5,7 +5,7 @@ import { useEffect, useRef, useState, type ChangeEvent, type ReactNode } from 'r
 
 type Message = { role: 'user' | 'assistant'; content: string };
 
-const WELCOME = "Hey! I'm Kat's AI assistant. Ask me anything about her background, experience, or what she's looking for next.";
+const WELCOME = "Hey! I'm Kat's AI assistant. Ask me anything about her background, how she works, or what she's been building.";
 const MAX_MESSAGES = 10;
 
 function parseBold(text: string): ReactNode[] {
@@ -126,7 +126,7 @@ export default function AskKat() {
     } catch {
       setMessages(m => [
         ...m,
-        { role: 'assistant', content: "I'm not available right now — reach out to Kat directly at katricemountford@gmail.com." },
+        { role: 'assistant', content: "I'm not available right now. Reach out to Kat directly at katricemountford@gmail.com." },
       ]);
     } finally {
       setLoading(false);
@@ -232,7 +232,7 @@ export default function AskKat() {
 
           {atLimit && (
             <p className='text-[11px] font-body text-center py-1' style={{ color: 'var(--text-muted)' }}>
-              That&apos;s the session limit —{' '}
+              That&apos;s the session limit.{' '}
               <a href='mailto:katricemountford@gmail.com' className='underline' style={{ color: '#94C5FF' }}>
                 reach out directly
               </a>{' '}

@@ -22,7 +22,7 @@ const roles: Role[] = [
     period: 'Jan 2023 – Apr 2023',
     location: 'Sydney, Australia',
     summary:
-      'Built Talk to Maple — a gamified AI journaling app for Gen-Z mental health — from zero to app store launch in 8 weeks during Antler\'s pre-seed accelerator program.',
+      'Built Talk to Maple, a gamified AI journaling app for Gen-Z mental health, from zero to app store launch in 8 weeks during Antler\'s pre-seed accelerator program.',
     highlight: '85 users in week one. 95% of sessions left users feeling the same or better.',
     accent: '#FF94C5',
     tag: 'Startup',
